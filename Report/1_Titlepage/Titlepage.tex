@@ -1,0 +1,60 @@
+\documentclass[a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[left=25mm, right=25mm, top=1.2cm,bottom=3cm]{geometry}
+\usepackage{pgfornament}
+
+\usepackage{lmodern}
+\usepackage{multirow}
+
+%NEW COMMANDS
+\newcommand{\fsa}[1]{\fontshape{#1}}
+\newcommand{\fsh}[1]{\fontseries{#1}}
+\newcommand{\fs}[1]{\fontsize{#1}{10pt}}
+\newcommand{\sefo}{\selectfont}
+%NEW COMMANDS
+
+\parindent0pt
+\thispagestyle{empty}
+
+\begin{document}
+
+\centering
+\vspace*{1.5cm}
+
+%\rule{\textwidth}{1.5pt}\\
+%\vspace{-3pt}
+{\fsa{sc}\fs{35pt}\sefo  Organic Solar Cell}\\[10pt]
+
+\vspace{1.8cm}
+\rule{0.2\textwidth}{1.6pt}
+
+\vspace{2cm}
+{\fsa{sc}\fs{19pt}\sefo  Report for the Advanced Lab Course}
+
+\vspace{1.3cm}
+{\fsa{sc}\fs{15pt} \sefo by}
+
+\vspace{1.3cm}
+{\fs{25pt}\fsh{m}\fsa{sc}\sefo Yoshua Hempel}
+
+\vspace{1.3cm}
+{\fs{15pt}\fsa{sc}\sefo and}
+
+\vspace{1.3cm}
+{\fs{25pt}\fsh{m}\fsa{sc}\sefo William Wenig}
+
+\vspace{2.5cm}
+{\fs{15pt}\fsh{m}\fsa{sc}\sefo supervised by Dr. Patrick Amsalem}
+
+\vspace{0.5cm}
+\begin{figure}[h]\centering
+\pgfornament[width=5cm]{88}
+\end{figure}	
+
+\vfill
+{\fsa{sc}\fs{19pt}\sefo November 2022, Berlin}\\[9pt]
+{\fsa{sc}\fs{19pt}\sefo Humboldt-Universität zu Berlin}\\[7pt]
+{\fsa{sc}\fs{18pt}\sefo Institut für Physik}
+\end{document}

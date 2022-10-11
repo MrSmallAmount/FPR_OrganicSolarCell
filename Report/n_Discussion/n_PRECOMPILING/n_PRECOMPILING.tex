@@ -1,0 +1,26 @@
+\documentclass[a4paper,10pt,twocolumn]{article}
+
+\usepackage[header=false,
+			handles=false,
+			copydocumentclass=false,
+			active,
+			generate=n_rawtext.tex,
+			extract-env={document}]{extract}
+
+%====================================PREAMBLE IMPORT====================================
+\input{../../0_Preamble/FPR_preamble.tex}
+%====================================PREAMBLE IMPORT====================================
+
+
+%========================WE NEED LOCAL DEFINITION OF PATH TO BIB========================
+\addbibresource{../../0_Bibliography/FPR.bib}
+%========================WE NEED LOCAL DEFINITION OF PATH TO BIB========================
+
+
+\begin{document}\begin{extract*}
+
+\section{Discussion}
+This is the wonderful discussion.
+
+\end{extract*}
+\end{document}

@@ -1,0 +1,19 @@
+======================PNG INCLUSION======================
+\begin{figure}[h]\centering
+	\includegraphics{<RELATIVEPATH>/STUFF.png}
+\end{figure}
+======================PNG INCLUSION======================
+
+
+======================SVG/PDF_TEX INCLUSION======================
+\begin{figure}[h]\centering
+	\subimport{<PATHTOSVGSTUFF>}{not_centered_mirror.pdf_tex}
+\end{figure}
+======================SVG/PDF_TEX INCLUSION======================
+
+
+======================PDF INCLUSION======================
+\begin{figure}[h]\centering
+	\includegraphics{<RELATIVEPATH>/STUFF.pdf}
+\end{figure}
+======================PDF INCLUSION======================

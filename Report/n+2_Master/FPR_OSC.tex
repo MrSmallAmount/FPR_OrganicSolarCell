@@ -1,0 +1,52 @@
+\documentclass[a4paper,10pt,twocolumn]{article}
+
+%====================================PREAMBLE IMPORT====================================
+\input{../0_Preamble/FPR_preamble.tex}% yes it's long, that's why
+%====================================PREAMBLE IMPORT====================================
+
+%========================WE NEED LOCAL DEFINITION OF PATH TO BIB========================
+\addbibresource{../0_Bibliography/FPR.bib}
+%========================WE NEED LOCAL DEFINITION OF PATH TO BIB========================
+
+\begin{document}
+\renewcommand{\thepage}{\roman{page}}
+%====================================IMPORT TITLEPAGE====================================
+\onecolumn% pdfpages will error out when you try to include a pdf in twocolumn mode
+\thispagestyle{empty}% empty canvas to paste in the pdf
+\includepdf{../1_Titlepage/Titlepage.pdf} 
+\twocolumn% switching back to twocolumn mode
+%====================================IMPORT TITLEPAGE====================================
+
+
+%====================================CREATE TABLE OF CONTENTS====================================
+\onecolumn
+\thispagestyle{empty}
+%here follows a solution that is not ideal, can be cleaned up later
+\titleformat{\section}{\fsi{30pt}\fsa{sc}\sefo}{\fsi{13pt}\sefo\textbf\thesection.}{4ex}{\hspace{0.9cm}}[\addvspace{1.2cm}]
+{\hypersetup{hidelinks}\tableofcontents}
+\titleformat{\section}{\fsi{12pt}\fsa{sc}\sefo}{\fsi{13pt}\sefo\textbf\thesection.}{2ex}{\filcenter}
+%====================================CREATE TABLE OF CONTENTS====================================
+
+\vfill
+%====================================ABSTRACT====================================
+\begin{abstract}
+This is the totally normal and very compressed abstract that took way too long to admit.
+\end{abstract}
+%====================================ABSTRACT====================================
+\twocolumn
+\clearpage
+\renewcommand{\thepage}{\arabic{page}}
+\setcounter{page}{1}
+
+%==============================================================================================
+%====================================WE BEGIN TO WRITE HERE====================================
+%==============================================================================================
+
+\import{../n_Discussion/n_PRECOMPILING/}{n_rawtext.tex}
+
+\import{../n+1_Conclusion/n+1_PRECOMPILING/}{n+1_rawtext.tex}
+
+\clearpage
+\onecolumn
+\printbibliography
+\end{document}

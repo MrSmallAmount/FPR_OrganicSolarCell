@@ -1,0 +1,126 @@
+
+%====================================ENCODING PACKAGES====================================
+\usepackage[utf8]{inputenc}%
+\usepackage[T1]{fontenc}%
+\usepackage{textcomp}%
+%====================================ENCODING PACKAGES====================================
+
+
+%====================================FONT PACKAGES====================================
+\usepackage{opensans}%
+\usepackage{lmodern}%
+%====================================FONT PACKAGES====================================
+
+
+%====================================UTILITY PACKAGES====================================
+\usepackage[english]{babel}%			--> english hyphenation, translation, etc for TeX stuff
+\usepackage{csquotes}
+\usepackage{import}
+\usepackage{pdfpages}%				 	--> inserting .pdf files
+\usepackage{amsmath}%				}
+\usepackage{amssymb}%				}	--> math
+\usepackage{geometry}%
+\usepackage{graphicx}%
+\usepackage{color}%
+\usepackage{float}%
+\usepackage{multicol}%					--> handling onecolumn figures
+\usepackage{multirow}%				}
+\usepackage{booktabs}%				}	--> nice tables
+\usepackage{fancyhdr}%				 	--> nice headers
+\usepackage{subfig}%					--> creation of subfloats for arrays of images
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=kekcolor]{hyperref}%
+%====================================UTILITY PACKAGES====================================
+
+%====================================PACKAGE RELATED CONFIGS====================================
+\definecolor{kekcolor}{RGB}{15,163,59}
+\definecolor{grun}{RGB}{0,127,0}
+%\geometry{top=0.75 in, bottom=1in, left=0.75in, right=0.75in,columnsep=0.2in}%
+\geometry{top=19mm, bottom=30mm, left=13mm, right=13mm,columnsep=4mm}%
+%SOURCE ----> https://www.yumpu.com/en/document/read/48657545/preparation-of-papers-in-two-column-format-for-the-date
+\setlength{\headheight}{14pt}%			--> fancyhdr requires a sufficent \headheight
+\renewcommand{\arraystretch}{1.1}%		--> correcting for the look of tables (more room between each row)
+%====================================PACKAGE RELATED CONFIGS====================================
+
+
+%====================================GENERAL CONFIGS====================================
+\setlength{\parindent}{0pt}%			--> no initial indents
+\numberwithin{equation}{section}%		--> the equation counter loops in each succession of section counter
+\makeatletter%						}
+\@newctr{footnote}[section]%			} 	--> the footnote counter loops in each succession of the page counter
+\makeatother%						}
+%====================================GENERAL CONFIGS====================================
+
+
+%====================================OBAMINA FAMILY OPERATORS====================================
+\usepackage{obaminaandmore}%
+%TexStudio may mark the used package as unkown. Ignore. It's in the folder as obamina_andmore.sty
+%====================================OBAMINA FAMILY OPERATORS====================================
+
+
+%=====================================STYLING THE SECTION TITLES====================================
+\usepackage{titlesec}
+\titleformat{\section}
+{\fsi{12pt}\fsa{sc}\sefo}
+{\fsi{13pt}\sefo\textbf{\thesection.}}
+{2ex}
+{\filcenter}
+
+
+\titleformat{\subsection}
+{\fsi{10pt}\fsa{sc}\sefo}
+{\fsi{11pt}\sefo\textbf\thesubsection.}
+{2ex}
+{\filcenter  }
+%====================================STYLING THE SECTION TITLES====================================
+
+
+%====================================STYLING THE TABLE OF CONTENTS====================================
+\usepackage{titletoc}
+%\dottedcontents{section}[0pt]{}{2ex}{5cm}
+\contentsmargin{1cm}
+\titlecontents{section}[0pt]%format and left
+			  {\addvspace{16pt}}% above-code
+			  {\fse{b}\fsi{15pt}\os\sefo\thecontentslabel \hspace{2ex} }%numbered-entry-format
+			  {\fse{b}\fsi{15pt}\os\sefo\thecontentslabel \hspace{2ex} }%numberless-entry-format
+			  {\hfill {\fsi{14pt}\sefo \thecontentspage}}%filler-page-format
+			  [\addvspace{4pt}]%below-code
+			  
+%\dottedcontents{subsection}[14ex]%format and left
+%			   {\Large}%above-code alias global formatting of the entry
+%			   {5ex}%label-width
+%			   {5pt}%leader-with
+			   
+\titlecontents{subsection}[1cm]{}{\Large\thecontentslabel\hspace{3ex}}{\Large}{\hfill {\fsi{14pt}\sefo\thecontentspage}}
+			  
+%====================================STYLING THE TABLE OF CONTENTS====================================
+
+
+%====================================FANCYHDR and HEADERS INIT====================================
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\sectionmark}[1]{\markright{#1}}
+\renewcommand{\subsectionmark}[1]{}
+\fancyhead[LO]{\textbf {\fsi{11pt}\sefo \thesection}.\hspace{2ex}{\scshape \rightmark}}
+\fancyhead[RO]{\textbf \thepage}
+%====================================FANCYHDR and HEADERS INIT====================================
+
+
+%====================================FONT COMMANDS====================================
+\newcommand{\fsi}[1]{\fontsize{#1}{8pt}}
+\newcommand{\fse}[1]{\fontseries{#1}}
+\newcommand{\fsa}[1]{\fontshape{#1}}
+\newcommand{\sefo}{\selectfont}
+\newcommand{\os}{\fontfamily{opensans-TLF}}
+\newcommand{\FT}{{\os\sefo FT}}
+\newcommand{\IFT}{{\os\sefo IFT}}
+%====================================FONT COMMANDS====================================
+
+
+%====================================NEW COMMANDS====================================
+\newcommand{\mypar}{\\[0.4\baselineskip]}
+%====================================NEW COMMANDS====================================
+
+
+%====================================BIBLIOGRAPHY====================================
+\usepackage[backend=biber,style=alphabetic,maxbibnames=10,maxcitenames=3]{biblatex}
+%====================================BIBLIOGRAPHY====================================

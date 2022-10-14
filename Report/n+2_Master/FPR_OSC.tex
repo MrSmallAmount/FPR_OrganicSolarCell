@@ -48,5 +48,10 @@ This is the totally normal and very compressed abstract that took way too long t
 
 \clearpage
 \onecolumn
+%Remove the numbering on the reference which is not visible in ToC
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LO]{{\scshape \rightmark}}
+\fancyhead[RO]{\textbf \thepage}
 \printbibliography
 \end{document}

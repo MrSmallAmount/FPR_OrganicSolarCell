@@ -1,0 +1,20 @@
+STEP 0:
+Make a copy of this folder to start working
+
+STEP 1:
+Rename the x_New-Chapter folder, where x is the ToC number of the chapter
+
+STEP 2:
+Replace x (ToC number) in the contained folders and .tex-files (x_Pictures, x_PRECOMPILING, x_PRECOMPILING.tex, x_rawtext.tex)
+
+STEP 3:
+Replace x in "generate=x_rawtext.tex"
+
+STEP 4:
+Compile for testing.
+
+STEP 5:
+Go into the n+2_Master folder and paste a new \import line into the master document (FPR_labcourse) after "WE BEGIN TO WRITE HERE"
+
+TIP:
+To see changes you wrote in x_PRECOMPILING.tex you have to compile which creates the x_rawtext.tex that ACTUALLY gets imported in n+2_Master

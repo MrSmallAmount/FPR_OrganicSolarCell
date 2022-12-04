@@ -1,0 +1,31 @@
+\documentclass[a4paper,10pt,twocolumn]{article}
+
+\usepackage[header=false,
+			handles=false,
+			copydocumentclass=false,
+			active,
+			generate=1_rawtext.tex,
+			extract-env={document}]{extract}
+
+%====================================PREAMBLE IMPORT====================================
+\input{../../0_Preamble/FPR_preamble.tex}
+%====================================PREAMBLE IMPORT====================================
+
+
+%========================WE NEED LOCAL DEFINITION OF PATH TO BIB========================
+\addbibresource{../../0_Bibliography/FPR.bib}
+%========================WE NEED LOCAL DEFINITION OF PATH TO BIB========================
+
+
+\begin{document}\begin{extract*}
+
+\section*{Introduction}%prevent numbering for the intro
+\addcontentsline{toc}{section}{\protect\numberline{}\hspace{0.3cm}Introduction}%add intro to contents
+
+
+
+\section{Assembling organic solar cells}
+This (\cite{labdesc} ) is a cool source
+
+\end{extract*}
+\end{document}

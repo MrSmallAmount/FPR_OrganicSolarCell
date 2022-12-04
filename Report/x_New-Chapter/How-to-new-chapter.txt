@@ -8,7 +8,7 @@ STEP 2:
 Replace x (ToC number) in the contained folders and .tex-files (x_Pictures, x_PRECOMPILING, x_PRECOMPILING.tex, x_rawtext.tex)
 
 STEP 3:
-Replace x in "generate=x_rawtext.tex"
+In "x_PRECOMPILING.tex" replace x in "generate=x_rawtext.tex"
 
 STEP 4:
 Compile for testing.

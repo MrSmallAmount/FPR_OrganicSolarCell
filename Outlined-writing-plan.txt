@@ -1,0 +1,42 @@
+OUTLINE for the report
+
+EXCLUDING THE INTRODUCTION WE WON'T USE THE LAME TITLES FOR THE SECTIONS
+    --> think of nice titles for each logical section
+
+Introduction
+    -- setting the scene for the work we did
+
+Materials and Methods
+    -- Building the organic solar cells
+        - BIG FUCKING TABLE of each prepped slide
+        - Cleaning process
+        - Spin coating process and annealing
+        - process of thermal vacuum evaporation
+        - calibration of the SOL-device with Laser Point Plast Photodiode
+        - calibration of the SOL-device with ReRa Si-cell
+
+Evaluating
+    -- Plotting the important I_V curves where we have data to do so
+        - showing the dependence on light intensity
+        - showing the visualization of the important characteristics
+    STUFF PATRICKS WANTS TO SEE (trying to do it where we can do it)
+    -- power conversion efficiency in dependence of the power density
+    -- stromdichte in abhängigkeit von der photon density
+
+Discussion
+    -- calibration done right?
+    -- slow and careful at unimportant steps but too fast at VERY important steps (positioning in the vacuum chamber, getting the right tool for handling the prepared slides)
+    -- impurities
+        - too fast when increasing the power when thermal evaporating
+        - outgasing of filament in the vacuum chamber when thermal evaporation
+        - touching by hand
+        - dropping because insufficient tools
+        - residues of soap in the beakers when sonicating
+
+Improvements
+    -- better safety (inhaling chemicals, looking into the SOL)
+    -- having a clean working enviroment
+        - TIDY THE FUCKING LAB
+    -- using the right tools for picking up the slides
+    -- designated tasks for each experimentor
+        - training in handling the slides and syringes will yield better results

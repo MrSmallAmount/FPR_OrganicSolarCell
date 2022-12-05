@@ -44,10 +44,7 @@
 
 %====================================GENERAL CONFIGS====================================
 \setlength{\parindent}{0pt}%			--> no initial indents
-\numberwithin{equation}{section}%		--> the equation counter loops in each succession of section counter
-\makeatletter%						}
-\@newctr{footnote}[section]%			} 	--> the footnote counter loops in each succession of the page counter
-\makeatother%						}
+\numberwithin{equation}{section}%		--> the equation counter loops in each succession of section counter						}
 %====================================GENERAL CONFIGS====================================
 
 
@@ -91,8 +88,20 @@
 %			   {5pt}%leader-with
 			   
 \titlecontents{subsection}[1cm]{}{\Large\thecontentslabel\hspace{3ex}}{\Large}{\hfill {\fsi{14pt}\sefo\thecontentspage}}
-			  
 %====================================STYLING THE TABLE OF CONTENTS====================================
+
+
+%====================================STYLING OF THE FOOTNOTES====================================
+\makeatletter%						
+\@newctr{footnote}[section]%			} 	--> the footnote counter loops in each succession of the page counter
+\makeatother%
+
+%source:	KOMA-script documentation p. 321
+\usepackage{scrextend}%						--> adds KOMA functionalities to this whole document
+\deffootnote{1ex}{1ex}{%
+	\textsuperscript{\thefootnotemark}%
+}
+%====================================STYLING OF THE FOOTNOTES====================================
 
 
 %====================================FANCYHDR and HEADERS INIT====================================
@@ -122,6 +131,8 @@
 \newcommand{\OSC}{{\os\sefo OSC}}
 \newcommand{\BHSC}{{\os\sefo BHSC}}
 %====================================NEW COMMANDS====================================
+
+
 
 
 %====================================BIBLIOGRAPHY====================================

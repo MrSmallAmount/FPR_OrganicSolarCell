@@ -40,3 +40,4 @@ Improvements
     -- using the right tools for picking up the slides
     -- designated tasks for each experimentor
         - training in handling the slides and syringes will yield better results
+    -- estimate statistical error through the mean deviation from linear regression between two points per distance and slope

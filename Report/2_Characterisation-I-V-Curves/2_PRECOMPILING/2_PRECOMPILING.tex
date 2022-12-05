@@ -1,0 +1,28 @@
+\documentclass[a4paper,10pt,twocolumn]{article}
+
+\usepackage[header=false,
+			handles=false,
+			copydocumentclass=false,
+			active,
+			generate=2_rawtext.tex,
+			extract-env={document}]{extract}
+
+%====================================PREAMBLE IMPORT====================================
+\input{../../0_Preamble/FPR_preamble.tex}
+%====================================PREAMBLE IMPORT====================================
+
+
+%========================WE NEED LOCAL DEFINITION OF PATH TO BIB========================
+\addbibresource{../../0_Bibliography/FPR.bib}
+%========================WE NEED LOCAL DEFINITION OF PATH TO BIB========================
+
+
+\begin{document}\begin{extract*}
+
+\section{Characterization of the I-V-Curves}
+
+In order to characterize the manufactured solar cells, we connected them to a multimeter and put them on top of a solar simulator. The simulator utilizes the AM 1.5 global reference spectrum and is also outfitted with 5 different filters to dim the light. Using the multimeter we applied a sequence of voltages to the cell and measured the current that was produced as a result. This was done at different levels of intensity of the light and in the dark.\\
+In order to get an accurate measure for the intensity with which the solar simulator irradiated the cells, we measured the I-V-curves of an inorganic solar cell whose efficiency had already been determined, using the different filters.
+
+\end{extract*}
+\end{document}

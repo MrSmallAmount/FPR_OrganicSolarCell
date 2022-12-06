@@ -32,6 +32,7 @@ Discussion
         - touching by hand
         - dropping because insufficient tools
         - residues of soap in the beakers when sonicating
+    -- Galinstan will yeet off 
 
 Improvements
     -- better safety (inhaling chemicals, looking into the SOL)

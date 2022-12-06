@@ -1,0 +1,24 @@
+==================================FOR SVG-FILES==================================
+
+Before putting it into latex use this on the file
+
+gs -o target_file.pdf -sDEVICE=pdfwrite -dColorConversionStrategy=/CMYK -dProcessColorModel=/DeviceCMYK -dCompatibilityLevel=1.5 original_file.pdf
+
+Then include via
+
+\begin{figure}[h]
+	\fontsize{#1}{8pt}\sefo
+	\centering
+	\graphicspath{{Pictures/}}%Path to the .scg-file
+	\def\svgwidth{0.9\columnwidth}
+	\import{./Pictures/}{$$NAME$$.pdf_tex}
+	\caption{\centering WELL WRITTEN DESCRIPTION}.
+	\label{fig:$$NAME$$}
+\end{figure}
+
+==================================FOR PDF-FILES==================================
+FOR MATPLOTLIB
+figsize = [7, 4] is very nice
+with labelsize / tickfontsize = 14
+and xlabel/ylabel fontsize = 20
+THIS IS ALL WITH \INCLUDEGRAPHICS[SCALE = 0.5]{file.pdf}

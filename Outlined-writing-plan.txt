@@ -42,3 +42,46 @@ Improvements
     -- designated tasks for each experimentor
         - training in handling the slides and syringes will yield better results
     -- estimate statistical error through the mean deviation from linear regression between two points per distance and slope
+
+
+
+
+
+
+
+
+
+
+1. Assembly
+
+
+
+
+2.      Characterization of I-U-curves
+adjawnfuijabfubfsiufbsufia <== Calibration
+                            <== What device do we use for the light
+
+
+2.1     Photodiode calibration
+asjbdajubsdubjasdajsda <== How do the filters effect the power output etc..
+
+https://www.laserpoint.eu/products/photodiodes/pd-500-d9-vis/
+
+
+2.2     Verification via inorganic solar cell
+asnfkidngnedrjgnjregswe <== Does the reference cell yield the given parameters in the manual for our, now calibrated, ABET device?
+
+
+2.3     Calculation of cell parameters
+
+I-U curves -> with A j-U curves -> meaning over cells in each OSC slide
+
+j_sc and V_oc via interpolation (explanation with errors)
+
+==> tables for achieved parameters
+
+==> Filter0, Filter2, Filter 4, Dark for:   -OSC1
+                                            -OSC3
+                                            -OSC5
+                                            -Patrick
+

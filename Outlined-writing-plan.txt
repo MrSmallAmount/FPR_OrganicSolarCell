@@ -65,8 +65,6 @@ adjawnfuijabfubfsiufbsufia <== Calibration
 2.1     Photodiode calibration
 asjbdajubsdubjasdajsda <== How do the filters effect the power output etc..
 
-https://www.laserpoint.eu/products/photodiodes/pd-500-d9-vis/
-
 
 2.2     Verification via inorganic solar cell
 asnfkidngnedrjgnjregswe <== Does the reference cell yield the given parameters in the manual for our, now calibrated, ABET device?

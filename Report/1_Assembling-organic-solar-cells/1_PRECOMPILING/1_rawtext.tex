@@ -7,13 +7,13 @@ Today's challenge is however to build low-cost solar cells that can be tailored 
 Because of low efficiencies of heterojunction solar cells developed in the 1980s \cite{tang}, new concepts arose like the >>bulk~heterojunction<< (\BHJ) solar cell \cite{heterojunk}. It promised to bypass the problem of the short diffusion length of excitons created in the heterojunction as well as the limited thickness of the junction layers in a heterojunction cell.\mypar
 Bulk heterojunction solar cells (\BHSC) still stand as state of the art technology as they are subject of current research (see~\cite{modernbulkhetero}). In this lab course we went through the process of assembling 5 different sets of \BHSC\ and characterized them with the {\os\sefo AM 1.5} global reference spectrum. In the following we will review the assembly\footnote{>>Assembly<< because we did not perform the preparation of the used materials.} and evaluate the obtained $I$-$U$-Curves.
 
-\begin{table}[h]
-\caption{Overview of architectures, diameters $\overline{d}_n$ and corresponding areas $A_n$ of assembled cells. Shown are the sets indexed by $k$ of \BHSC's with at least one \emph{not} shorted cell. Set $\star$ denotes the of set cells assembled by our supervisor.}
+\begin{table}[h]\centering
+\caption{Overview of architectures, diameters $\overline{d}_n$ and active areas $A_n$ of assembled cells. Shown are the sets indexed by $k$ of \BHSC's with at least one \emph{not} shorted cell. Set $\star$ denotes the of set cells assembled by our supervisor.}
 \label{tab:assemb-table}
 \begin{tabular}{@{}ccccccc@{}}\toprule
 \multirow{2}{*}[-0.7ex]{$k$} & \multirow{2}{*}[-0.7ex]{Architecture} & \multirow{2}{*}[-0.7ex]{$N$} & \multirow{2}{*}[-0.7ex]{$N_{\checkmark}$} & \multicolumn{3}{c}{Cell} \\ \cmidrule{5-7}
 & & & &$n$  & $\overline{d}_n$ [mm]  & $A_n$ [mm$^2$] \\ \midrule
-\multirow{4}{*}{1}  & ITO  & \multirow{4}{*}{2}& \multirow{4}{*}{2}& \multirow{2}{*}{1}& \multirow{2}{*}{$37.5\pm 0.5$}& \multirow{2}{*}{$60.0\pm 2.0$}\\
+\multirow{4}{*}{1}  & ITO  & \multirow{4}{*}{2}& \multirow{4}{*}{1}& \multirow{2}{*}{1}& \multirow{2}{*}{$37.5\pm 0.5$}& \multirow{2}{*}{$60.0\pm 2.0$}\\
 & PEDOT:PSS & & & & &  \\
 & P3HT:PSS & & &\multirow{2}{*}{2} & \multirow{2}{*}{$39.5\pm 0.5$}& \multirow{2}{*}{$63.2\pm 2.1$}\\
 & Galinstan & & & & & \\
@@ -23,7 +23,7 @@ Bulk heterojunction solar cells (\BHSC) still stand as state of the art technolo
 & P3HT:PSS & & & 4 & $37.0\pm 0.5$ & $59.2\pm 2.0$ \\
 & Galinstan & & & 5 & $40.5\pm 0.5$ & $64.8\pm 2.2$ \\
 &&&&&&\\
-\multirow{5}{*}{5}  & \multirow{2}{*}{PEIE} & \multirow{5}{*}{5}& \multirow{5}{*}{4}  & 1 & $49.5\pm 0.4$ & $79.2\pm 2.6$ \\
+\multirow{5}{*}{5}  & \multirow{2}{*}{PEIE} & \multirow{5}{*}{5}& \multirow{5}{*}{1}  & 1 & $49.5\pm 0.4$ & $79.2\pm 2.6$ \\
 & \multirow{2}{*}{P3HT:PCBM} & & & 2 & $52.2\pm 0.4$ & $83.5\pm 2.7$ \\
 & \multirow{2}{*}{PEDOT:PSS} & & & 3 & $40.2\pm 0.4$ & $64.3\pm 2.1$ \\
 & \multirow{2}{*}{Galinstan} & & & 4 & $37.5\pm 0.4$ & $60.0\pm 2.0$ \\
@@ -38,8 +38,13 @@ For each of the 5 sets of \BHSC's we performed all steps of the assembly on a sq
 \begin{equation*}
 w = (1600\pm50)\;\text{\textmu m}.
 \end{equation*}
-Where we assumed a measurement uncertainty of an analog caliper. The viewing-angle-dependent visibility of the transparent ITO stripes, created the necessity of a shallow scratch on the glass. This helped identifying the orientation of the substrate later on.
+Where we assumed a measurement uncertainty of an analog caliper. The viewing-angle-dependent visibility of the transparent ITO stripes, created the necessity of a shallow scratch on the glass. This helped identifying the orientation of the substrate later on.\mypar
+This is a weird moment
 
-
+\begin{figure}[h]\centering
+\subimport{../1_Pictures/}{Blobs.pdf_tex}
+\caption{Top-down view of an assembled set of \BHSC's with Galinstan cathode as for substrates $k=1$ in Table \ref{tab:assemb-table}. Under the assumption that the cathode drops are spherical, the active area $A_n$ of a cell is highlighted in blue.}
+\label{fig:blobs}
+\end{figure}
 
 

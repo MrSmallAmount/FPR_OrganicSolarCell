@@ -22,6 +22,7 @@
 \newcommand{\Uoc}{U_{\text{OC}}}
 \newcommand{\jsc}{j_{\text{SC}}}
 \newcommand{\Pmax}{P_{\text{max}}}
+\newcommand{\meanp}[1]{\langle #1 \rangle_p}
 
 \section{Characterization of the I-V-Curves}\label{sec:charac}
 
@@ -40,7 +41,17 @@ To get the maximum power density we simply multiplied the current densities and 
 	\Pmax = \max_{i} j_i\cdot U_i
 \end{align}
 
-In the case of sets $\mathbb{S}_3$ and $\mathbb{S}_\star$ we had multiple working cells. For these we decided to do all calculation with the mean of the current density across the working cells and include the standard deviation in the uncertainties of our results. The systematic errors of the current and voltage measurements were taken from \cite{keithley}
+In the case of sets $\mathbb{S}_3$ and $\mathbb{S}_\star$ we had multiple working cells. For these we decided to do all calculation with the mean of the current density over the working cells $p$ and include the standard deviation in the uncertainties of our results. The systematic errors of the current $u_{I,\text{sys}}$ and voltage $u_{U,\text{sys}}$ measurements were taken from \cite{keithley}. The uncertainty of the mean of the current density of measurement pair $i$ then is given as:
+
+\begin{align}
+	u_{\meanp{j_i}} = \sqrt{\frac{\sigma_{j,i}^2}{N} + \meanp{u_{j_i,\text{sys}}}^2}
+\end{align}
+
+With sample size $N$ being the amount of working cells of the set and the systematic error:
+
+\begin{align}
+	u_{j_{ip},\text{sys}} = \sqrt{ \left( \frac{ u_{I_{ip},\text{sys}}}{A_p}\right)^2+\left( j_{ip}\frac{u_{A_p}}{A_p} \right)^2}
+\end{align}
 
 \subsection{First set of \BHSC s}
 

@@ -19,10 +19,50 @@
 
 \begin{document}\begin{extract*}
 
-\section{Characterization of the I-V-Curves}
+\newcommand{\Uoc}{U_{\text{OC}}}
+\newcommand{\jsc}{j_{\text{SC}}}
+\newcommand{\Pmax}{P_{\text{max}}}
+
+\section{Characterization of the I-V-Curves}\label{sec:charac}
 
 In order to characterize the manufactured solar cells, we connected them to a multimeter and put them on top of a solar simulator. The simulator utilizes the AM 1.5 global reference spectrum and is also outfitted with 5 different filters to dim the light. Using the multimeter we applied a sequence of voltages to the cell and measured the current that was produced as a result. This was done at different levels of intensity of the light and in the dark.\\
-In order to get an accurate measure for the intensity with which the solar simulator irradiated the cells, we measured the I-V-curves of an inorganic solar cell whose efficiency had already been determined, using the different filters.
+In order to get an accurate measure for the intensity with which the solar simulator irradiated the cells, we \textbf{more stuff to write here}\\
+In order to calculate the open circuit voltage $\Uoc$ and the short circuit current density $\jsc$ for a set of measurements, we did a linear interpolation between the two closest points to the relevant axis ($j$-axis for $\Uoc$, $U$-axis for $\jsc$), on each side of it. So if our chosen points for the calculation of $\Uoc$ are $\{(j_1,U_1),(j_2,U_2)\}$ and for $\jsc$ are $\{(j_1^\prime,U_1^\prime),(j_2^\prime,U_2^\prime)\}$, then the formulas for $\Uoc$ and $\jsc$ are as follows.
+
+\begin{align}
+	\Uoc &= \frac{U_2 j_1 - U_1 j_2}{j_1-j_2}\\
+	\jsc &= \frac{U_1^\prime j_2^\prime - U_2^\prime j_1^\prime}{U_1^\prime-U_2^\prime}
+\end{align}
+
+To get the maximum power density we simply multiplied the current densities and voltages and took the largest value.
+
+\begin{align}
+	\Pmax = \max_{i} j_i\cdot U_i
+\end{align}
+
+In the case of sets $\mathbb{S}_3$ and $\mathbb{S}_\star$ we had multiple working cells. For these we decided to do all calculation with the mean of the current density across the working cells and include the standard deviation in the uncertainties of our results. The systematic errors of the current and voltage measurements were taken from \cite{keithley}
+
+\subsection{First set of \BHSC s}
+
+not sure what to write here yet
+
+\begin{figure}[h]\centering
+	\includegraphics[width=\columnwidth]{../../../IV-Curve-Analysis/OSC1Graph.pdf}
+	\caption{Current density measurements for the first architecture}
+	\label{fig:OSC1Graph}
+\end{figure}
+
+\subsection{Third set of \BHSC s}
+
+Since we only did one measurement for each of the cells, we decided to do our calculations using the mean of the current density at each voltage and include the standard deviation in the uncertainties. This way we can get a better idea of how big the variance in output across one set of solar cells can be.
+
+\begin{table}[h]\centering
+	\caption{Key parameters for each set of \BHSC s}
+	\label{tab:keyparams}
+	\begin{tabular}{@{}cccccc@{}}\toprule
+		Filter & $S$ & $\overline{\Pmax}$ & $\overline{\Uoc}$ & $\overline{\jsc}$ &$\overline{FF}$
+	\end{tabular}
+\end{table}
 
 \end{extract*}
 \end{document}

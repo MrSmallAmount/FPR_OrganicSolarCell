@@ -22,7 +22,7 @@
 \newcommand{\Uoc}{U_{\text{OC}}}
 \newcommand{\jsc}{j_{\text{SC}}}
 \newcommand{\Pmax}{P_{\text{max}}}
-\newcommand{\meanp}[1]{\langle #1 \rangle_p}
+\newcommand{\meann}[1]{\langle #1 \rangle_n}
 
 \section{Characterization of the I-V-Curves}\label{sec:charac}
 
@@ -41,21 +41,29 @@ To get the maximum power density we simply multiplied the current densities and 
 	\Pmax = \max_{i} j_i\cdot U_i
 \end{align}
 
-In the case of sets $\mathbb{S}_3$ and $\mathbb{S}_\star$ we had multiple working cells. For these we decided to do all calculation with the mean of the current density over the working cells $p$ and include the standard deviation in the uncertainties of our results. The systematic errors of the current $u_{I,\text{sys}}$ and voltage $u_{U,\text{sys}}$ measurements were taken from \cite{keithley}. The uncertainty of the mean of the current density of measurement pair $i$ then is given as:
+The fill factor $FF$ is defined as the ratio of maximum power to the product of open circuit voltage and short circuit current.
 
 \begin{align}
-	u_{\meanp{j_i}} = \sqrt{\frac{\sigma_{j,i}^2}{N} + \meanp{u_{j_i,\text{sys}}}^2}
+	FF = \frac{\Pmax}{\Uoc \cdot \jsc}
+\end{align}
+
+In the case of sets $\mathbb{S}_3$ and $\mathbb{S}_\star$ we had multiple working cells. For these we decided to do all calculation with the mean of the current density over the working cells $n$ and include the standard deviation in the uncertainties of our results. The systematic errors of the current $u_{I,\text{sys}}$ and voltage $u_{U,\text{sys}}$ measurements were taken from \cite{keithley}. The uncertainty of the mean of the current density of measurement pair $p$ then is given as:
+
+\begin{align}
+	u_{\meann{j_p}} = \sqrt{\frac{\sigma_{j,p}^2}{N} + \meann{u_{j_p,\text{sys}}}^2}
 \end{align}
 
 With sample size $N$ being the amount of working cells of the set and the systematic error:
 
 \begin{align}
-	u_{j_{ip},\text{sys}} = \sqrt{ \left( \frac{ u_{I_{ip},\text{sys}}}{A_p}\right)^2+\left( j_{ip}\frac{u_{A_p}}{A_p} \right)^2}
+	u_{j_{pn},\text{sys}} = \sqrt{ \left( \frac{ u_{I_{pn},\text{sys}}}{A_n}\right)^2+\left( j_{pn}\frac{u_{A_n}}{A_n} \right)^2}
 \end{align}
+
+The uncertainty of maximum power and fill factor, as well as short circuit current and open circuit voltage can then be obtained through Gaußian error propagation.
 
 \subsection{First set of \BHSC s}
 
-not sure what to write here yet
+For the first set of \BHSC s $\mathbb{S}_1$, for which only one cell was not shorted, we obtained the following parameters.
 
 \begin{figure}[h]\centering
 	\includegraphics[width=\columnwidth]{../../../IV-Curve-Analysis/OSC1Graph.pdf}
@@ -65,13 +73,17 @@ not sure what to write here yet
 
 \subsection{Third set of \BHSC s}
 
-Since we only did one measurement for each of the cells, we decided to do our calculations using the mean of the current density at each voltage and include the standard deviation in the uncertainties. This way we can get a better idea of how big the variance in output across one set of solar cells can be.
-
 \begin{table}[h]\centering
 	\caption{Key parameters for each set of \BHSC s}
 	\label{tab:keyparams}
 	\begin{tabular}{@{}cccccc@{}}\toprule
-		Filter & $S$ & $\overline{\Pmax}$ & $\overline{\Uoc}$ & $\overline{\jsc}$ &$\overline{FF}$
+		Filter $i$ & $S_i$ & $\Pmax$ [$\mu$W cm$^{-2}$] & $\Uoc$ & $\jsc$ & $FF$\\\midrule
+		0 & - & $  \pm  $ & $  \pm  $ & $  \pm  $ & $  \pm  $ \\
+		1 & - & $  \pm  $ & $  \pm  $ & $  \pm  $ & $  \pm  $ \\
+		2 & - & $  \pm  $ & $  \pm  $ & $  \pm  $ & $  \pm  $ \\
+		3 & - & $  \pm  $ & $  \pm  $ & $  \pm  $ & $  \pm  $ \\
+		4 & - & $  \pm  $ & $  \pm  $ & $  \pm  $ & $  \pm  $ \\
+		5 & - & $  \pm  $ & $  \pm  $ & $  \pm  $ & $  \pm  $ \\\bottomrule
 	\end{tabular}
 \end{table}
 

@@ -1,4 +1,4 @@
-%% Creator: Inkscape 1.2.1 (1:1.2.1+202210291243+9c6d41e410), www.inkscape.org
+%% Creator: Inkscape 1.2.2 (1:1.2.2+202212051552+b0a8486541), www.inkscape.org
 %% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
 %% Accompanies image file 'Blobs.pdf' (pdf, eps, ps)
 %%
@@ -38,7 +38,7 @@
   \newcommand*\fsize{\dimexpr\f@size pt\relax}%
   \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
   \ifx\svgwidth\undefined%
-    \setlength{\unitlength}{204.57513428bp}%
+    \setlength{\unitlength}{218.42992401bp}%
     \ifx\svgscale\undefined%
       \relax%
     \else%
@@ -50,16 +50,14 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,1.03727793)%
+  \begin{picture}(1,0.76306232)%
     \lineheight{1}%
     \setlength\tabcolsep{0pt}%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{Blobs.pdf}}%
-    \put(0.32395963,0.21453385){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\textbf{$A_n(d_n)$}\end{tabular}}}}%
-    \put(0.77081978,0.77455086){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\textbf{$d_n^x$}\end{tabular}}}}%
+    \put(0.20566154,0.11798869){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\textbf{$A_n(\overline{d}_n)$}\end{tabular}}}}%
+    \put(0.78535657,0.6758435){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\textbf{$\overline{d}_n$}\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=2]{Blobs.pdf}}%
-    \put(0.77082009,0.65080732){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\textbf{$w$}\end{tabular}}}}%
+    \put(0.78535685,0.55256784){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\textbf{$w$}\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=3]{Blobs.pdf}}%
-    \put(0.12496285,0.21303077){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\textbf{$d_n^y$}\end{tabular}}}}%
-    \put(0,0){\includegraphics[width=\unitlength,page=4]{Blobs.pdf}}%
   \end{picture}%
 \endgroup%

@@ -5,32 +5,7 @@
 The first viable \textit{inorganic} solar cells came to light at Bell~Laboratories in 1954 \cite{siliconSC_1}\cite{siliconSC_2} with power conversion efficiencies of about 6 percent. Though the commercial success was limited because of high production costs, Chapin, Pearson and Fuller proved to us that it is possible to harness significant amounts of solar energy for practical usage and thus set foot for photovoltaic advancements.\mypar
 Today's challenge is however to build low-cost solar cells that can be tailored to their specific application and can be produced in large amounts with established manufacturing processes\footnote{For an example of a realized roll-to-roll production see \cite{rolltoroll}.}. This has lead us to \textbf{organic} solar cells (\OSC).\mypar
 Because of low efficiencies of heterojunction solar cells developed in the 1980s \cite{tang}, new concepts arose like the >>bulk~heterojunction<< (\BHJ) solar cell \cite{heterojunk}. It promised to bypass the problem of the short diffusion length of excitons created in the heterojunction as well as the limited thickness of the junction layers in a heterojunction cell.\mypar
-Bulk heterojunction solar cells (\BHSC) still stand as state of the art technology as they are subject of current research (see~\cite{modernbulkhetero}). In this lab course we went through the process of assembling 5 different sets $\mathbb{S}_k$ of \BHSC\ and characterized them with the {\os\sefo AM 1.5} global reference spectrum. In the following we will review the assembly\footnote{We will call it assembly because we did not perform the complete preparation of the all used materials.} and evaluate the obtained $I$-$U$-curves.
-
-\begin{table}[h]\centering
-\caption{Overview of architectures, diameters $\overline{d}_n$ and active areas $A_n$ of assembled cells. Shown are the sets $\mathbb{S}_k$ of \BHSC's with at least one \emph{not} shorted cell. Set $\star$ denotes the set of cells assembled by our supervisor.}
-\label{tab:assemb-table}
-\begin{tabular}{@{}ccccccc@{}}\toprule
-\multirow{2}{*}[-0.7ex]{$k$} & \multirow{2}{*}[-0.7ex]{Architecture} & \multirow{2}{*}[-0.7ex]{$N$} & \multirow{2}{*}[-0.7ex]{$N_{\checkmark}$} & \multicolumn{3}{c}{Cell} \\ \cmidrule{5-7}
-& & & &$n$  & $\overline{d}_n$ [mm]  & $A_n$ [mm$^2$] \\ \midrule
-\multirow{4}{*}{1}  & ITO  & \multirow{4}{*}{2}& \multirow{4}{*}{1}& \multirow{2}{*}{1}& \multirow{2}{*}{$37.5\pm 0.5$}& \multirow{2}{*}{$60.0\pm 2.0$}\\
-& PEDOT:PSS & & & & &  \\
-& P3HT:PCBM & & &\multirow{2}{*}{2} & \multirow{2}{*}{$39.5\pm 0.5$}& \multirow{2}{*}{$63.2\pm 2.1$}\\
-& Galinstan & & & & & \\
-&&&&&&\\
-\multirow{4}{*}{3}  & ITO  & \multirow{4}{*}{5}& \multirow{4}{*}{4}  & 2 & $36.5\pm 0.5$ & $58.4\pm 2.0$ \\
-& PEDOT:PSS & & & 3 & $39.5\pm 0.5$ & $63.2\pm 2.1$ \\
-& P3HT:PCBM & & & 4 & $37.0\pm 0.5$ & $59.2\pm 2.0$ \\
-& Galinstan & & & 5 & $40.5\pm 0.5$ & $64.8\pm 2.2$ \\
-&&&&&&\\
-\multirow{5}{*}{5}  & \multirow{2}{*}{PEIE} & \multirow{5}{*}{5}& \multirow{5}{*}{1}  & 1 & $49.5\pm 0.4$ & $79.2\pm 2.6$ \\
-& \multirow{2}{*}{P3HT:PCBM} & & & 2 & $52.2\pm 0.4$ & $83.5\pm 2.7$ \\
-& \multirow{2}{*}{PEDOT:PSS} & & & 3 & $40.2\pm 0.4$ & $64.3\pm 2.1$ \\
-& \multirow{2}{*}{Galinstan} & & & 4 & $37.5\pm 0.4$ & $60.0\pm 2.0$ \\
-&  & & & 5 & $40.6\pm 0.4$ & $64.9\pm 2.1$ \\ \midrule
-$\star$ & As $k=1$  & 4& 4 & \multicolumn{3}{c}{$\overline{A} = (64.0 \pm 2.1)$ mm$^2$}  \\ \bottomrule
-\end{tabular}
-\end{table}
+Bulk heterojunction solar cells (\BHSC) still stand as state of the art technology as they are subject of current research (see~\cite{modernbulkhetero}). In this lab course we went through the process of assembling 5 different sets $\mathbb{S}_k$ of \BHSC\ and characterized them with the {\os\sefo AM 1.5} global reference spectrum. In the following we will review the assembly\footnote{We will call it assembly because we did not perform the complete preparation of all used materials.} and evaluate the obtained $I$-$U$-curves.
 
 \section{Assembly of bulk heterojunction solar cells}\label{sec:assembly}
 For each of the 5 sets of \BHSC's we performed all steps of the assembly on square glass substrates with sides of approximately 2~cm. The used substrates were coated with two ITO stripes (see \cite{labdesc} Figure~12) with a width of
@@ -41,17 +16,54 @@ Where we assumed a measurement uncertainty of an analog caliper. The viewing-ang
 We followed the assembly procedure given to us in Section~3.5 of \cite{labdesc}. After the removal of any remaining residue on the glass substrates, we applied the active layers onto them via spin coating and annealing afterwards. Finally aluminum cathodes were applied by thermal evaporation. On two sets we prepared drops of Galinstan as cathodes that we applied with syringes.
 
 \subsection{Thermal evaporation}
-When we annealed all active layers onto all substrates we let them cool down and put $\mathbb{S}_1$, $\mathbb{S}_2$ and $\mathbb{S}_4$ into a vacuum chamber. Sets $\mathbb{S}_3$ and $\mathbb{S}_5$ were left outside in a petri dish covered with aluminum foil. The chamber was pumped down to a pressure of $p_0 = (3.6\pm 0.1)\cdot 10^{-8}\; \mathrm{mbar}$ over 4 days and 15 hours.\mypar
-To protect the aluminum filament we increased the current flowing through it in steps of around 5~A until we reached 30~A. Because of the increasing temperature of the filament, gases trapped inside it and in it's surroundings exited into the chamber. So each time we increased the current flow, the pressure increased significantly and slowly decreased in the following as the pump continued to run. Between each current increase, we waited until the pressure had stabilized. As we approached a current of around 23~A, the filaments incandescent glow was visible and we positioned the sets of \BHSC's above the filament. At this point the pressure had increased up to around $8.6p_0$ and increased further to $30.5p_0$ as we reached a current of 30~A.\mypar
-The sets were mounted into a sample holder with a mask. That way, evaporated aluminum could only condensate on the exposed sample surface. To achieve the right orientation the ITO stripes mentioned above. had to be perpendicular to the mask of the sample holder. Unfortunately we did not get the right orientation on sets $\mathbb{S}_1$ and $\mathbb{S}_2$ and the aluminum cathodes condensated parallel to the ITO stripes.
+When we had annealed all active layers onto all substrates we let them cool down and put $\mathbb{S}_1$, $\mathbb{S}_2$ and $\mathbb{S}_4$ into a vacuum chamber. Sets $\mathbb{S}_3$ and $\mathbb{S}_5$ were left outside in a petri dish covered with aluminum foil. The chamber was pumped down to a pressure of $p_0 = (3.6\pm 0.1)\cdot 10^{-8}\; \mathrm{mbar}$ over 4 days and 15 hours.\mypar
+We began heating up the aluminum filament by increasing the current flowing through it in steps of around 5~A. This ensured the protection of the filament as we had to reach currents above 30~A. Because of the increasing temperature of the filament, gases trapped inside it and in it's surroundings exited into the chamber. So each time we increased the current flow, the pressure increased significantly and slowly decreased in the following as the pump continued to run. Between each current increase, we waited until the pressure had stabilized. As we approached a current of around 23~A, the filaments incandescent glow was visible and we positioned all sets in the chamber directly above the filament. At this point the pressure increased up to around $8.6p_0$ and increased further to $30.5p_0$ as we reached a current of 30~A.\mypar
+The sets were mounted into a sample holder with a mask. That way, evaporated aluminum could only condensate on the exposed sample surfaces in the way shown in \cite{labdesc} Figure 12. To achieve the right orientation the ITO stripes mentioned above, had to be perpendicular to the mask of the sample holder. Unfortunately we did not get the right orientation on sets $\mathbb{S}_1$ and $\mathbb{S}_2$ and the aluminum cathodes condensated in an orientation parallel to the ITO stripes. This forced us to use Galinstan cathodes on sets $\mathbb{S}_1$ and $\mathbb{S}_2$ but because of the \emph{now} small space left on the substrate we shorted set $\mathbb{S}_2$ in the process.
 
-\subsection{Description of set lineup}
-In the following we will describe each set $\mathbb{S}_k$ with it's planned architecture and (in the end) achieved architecture.
+\subsection{Active area with Galinstan cathode}
 
-\begin{figure}[h]\centering
+To obtain current densities $j(U)$ in Section~\ref{sec:charac} we will need the active area $A_{kn}$ of a cell $n$ of some set $\mathbb{S}_k$. As the majority of our assembled cells had Galinstan cathodes we will have a detailed look into the determination of $A_{kn}$. We will drop the index $k$ in order to maintain a clear notation.\mypar
+As for an aluminum cathode (see \cite{labdesc} Figure 12) we will assume the active area is defined as the visible overlap
+
+\begin{figure}[H]\centering
+% \def\svgscale{0.8}
 \subimport{../1_Pictures/}{Blobs.pdf_tex}
-\caption{Top-down view of an assembled set of \BHSC's with Galinstan cathode as for substrates $k=1$ in Table \ref{tab:assemb-table}. Under the assumption that the cathode drops are spherical, the active area $A_n$ of a cell is highlighted in blue.}
+\caption{Top-down view of an assembled set of \BHSC's with spherical assumed Galinstan cathode. An active area $A_n$ of a cell of this set is highlighted in blue. }
 \label{fig:blobs}
 \end{figure}
+
+%of cathode and corresponding ITO stripe. This leads to the situation depicted in Figure~\ref{fig:blobs}.
+%
+%
+%\begin{table}[h]\centering
+% \caption{Overview of architectures, diameters $\overline{d}_n$ and active areas $A_n$ of assembled cells. Shown are the sets $\mathbb{S}_k$ of \BHSC's with at least one \emph{not} shorted cell. Set $\star$ denotes the set of cells assembled by our supervisor.}
+% \label{tab:assemb-table}
+% \begin{tabular}{@{}ccccccc@{}}\toprule
+% \multirow{2}{*}[-0.7ex]{$k$} & \multirow{2}{*}[-0.7ex]{Architecture} & \multirow{2}{*}[-0.7ex]{$N$} & \multirow{2}{*}[-0.7ex]{$N_{\checkmark}$} & \multicolumn{3}{c}{Cell} \\ \cmidrule{5-7}
+% & & & &$n$  & $\overline{d}_n$ [mm]  & $A_n$ [mm$^2$] \\ \midrule
+% \multirow{4}{*}{1}  & ITO  & \multirow{4}{*}{2}& \multirow{4}{*}{1}& \multirow{2}{*}{1}& \multirow{2}{*}{$37.5\pm 0.5$}& \multirow{2}{*}{$60.0\pm 2.0$}\\
+% & PEDOT:PSS & & & & &  \\
+% & P3HT:PCBM & & &\multirow{2}{*}{2} & \multirow{2}{*}{$39.5\pm 0.5$}& \multirow{2}{*}{$63.2\pm 2.1$}\\
+% & Galinstan & & & & & \\
+% &&&&&&\\
+% \multirow{4}{*}{3}  & ITO  & \multirow{4}{*}{5}& \multirow{4}{*}{4}  & 2 & $36.5\pm 0.5$ & $58.4\pm 2.0$ \\
+% & PEDOT:PSS & & & 3 & $39.5\pm 0.5$ & $63.2\pm 2.1$ \\
+% & P3HT:PCBM & & & 4 & $37.0\pm 0.5$ & $59.2\pm 2.0$ \\
+% & Galinstan & & & 5 & $40.5\pm 0.5$ & $64.8\pm 2.2$ \\ \midrule
+% % &&&&&&\\
+% % \multirow{5}{*}{5}  & \multirow{2}{*}{PEIE} & \multirow{5}{*}{5}& \multirow{5}{*}{1}  & 1 & $49.5\pm 0.4$ & $79.2\pm 2.6$ \\
+% % & \multirow{2}{*}{P3HT:PCBM} & & & 2 & $52.2\pm 0.4$ & $83.5\pm 2.7$ \\
+% % & \multirow{2}{*}{PEDOT:PSS} & & & 3 & $40.2\pm 0.4$ & $64.3\pm 2.1$ \\
+% % & \multirow{2}{*}{Galinstan} & & & 4 & $37.5\pm 0.4$ & $60.0\pm 2.0$ \\
+% % &  & & & 5 & $40.6\pm 0.4$ & $64.9\pm 2.1$ \\ \midrule
+% $\star$ & As $k=1$  & 4& 4 & \multicolumn{3}{c}{$\overline{A} = (64.0 \pm 2.1)$ mm$^2$}  \\ \bottomrule
+% \end{tabular}
+%\end{table}
+%
+%
+%\subsection{Description of set lineup}
+%In the following we will describe each set $\mathbb{S}_k$ with it's planned architecture and (in the end) achieved architecture.
+%
+%% $A_{kn}$ yields the major contribution to the obtained uncertainties in the key parameters.
 
 

@@ -8,6 +8,6 @@ I\left(1+\frac{R_s}{R_{sh}}\right)-\frac{U}{R_{sh}} = I_s\exp\left(\frac{e(U-I R
 
 Here the photogenerated current is $I_{ph}$ and the saturation current under reverse bias $I_s$, as in the current at which point the current is invariant to an increase of the voltage. $e$ is the elementary charge, $k_B$ the Boltzmann-constant, $T$ the temperature and $n$ is the ideality factor describing how well the cell can be described with the ideal diode equation, being 1 if it's ideal. The shunt resistance relates to parasitic currents moving directly between the electrodes\cite{source11}.
 \\\textbf{more here (?)}\\
-The first set $\mathbb{S}_1$'s
+The first set $\mathbb{S}_1$ is the only set for which if the intensity of the light irradiating the first set $\mathbb{S}_1$ decreases, so does its fill factor. Such a behavior could be due to a higher level of impurities in the cell, as it was exposed to air at room conditions for several days.
 
 

@@ -19,23 +19,32 @@
 
 \begin{document}\begin{extract*}
 
-\newcommand{\Uoc}{U_{\text{OC}}}
-\newcommand{\jsc}{j_{\text{SC}}}
-\newcommand{\Pmax}{P_{\text{max}}}
-\newcommand{\meann}[1]{\langle #1 \rangle_n}
-
 \section{Characterization of the I-V-Curves}\label{sec:charac}
 
-In order to characterize the manufactured solar cells, we connected them to a multimeter and put them on top of a solar simulator. The simulator utilizes the AM 1.5 global reference spectrum and is also outfitted with 5 different filters to dim the light. Using the multimeter we applied a sequence of voltages to the cell and measured the current that was produced as a result. This was done at different levels of intensity of the light and in the dark.\\
-In order to get an accurate measure for the intensity with which the solar simulator irradiated the cells, we \textbf{more stuff to write here}\\
-In order to calculate the open circuit voltage $\Uoc$ and the short circuit current density $\jsc$ for a set of measurements, we did a linear interpolation between the two closest points to the relevant axis ($j$-axis for $\Uoc$, $U$-axis for $\jsc$), on each side of it. So if our chosen points for the calculation of $\Uoc$ are $\{(j_1,U_1),(j_2,U_2)\}$ and for $\jsc$ are $\{(j_1^\prime,U_1^\prime),(j_2^\prime,U_2^\prime)\}$, then the formulas for $\Uoc$ and $\jsc$ are as follows.
+In order to characterize the assembled sets of \BHSC's, we used the Keithley~2602A~Sourcemeter and ABET~Technologies’ solar simulator SUN~2000. The simulator reproduces the AM 1.5 global reference spectrum and was also equipped with 5 different filters for varying the light intensity. Using the source meter we applied sequences of voltages to the cells and measured the currents resulting from their irradiation. This was done at different levels of intensity of light as well as darkness for which we covered each set with a plastic box.
+\subsection{Irradiance calibration}
+To ensure that the SUN~2000 was calibrated to yield an irradience of $1\;\text{mW}\!\cdot\text{mm}^{-2}$, we used the Laser~Point PD-500-D9-VIS. With a digital caliper we measured the aperture of the photo diode to have a diameter of $d_p = 9.9(5)\;\text{mm}$. Here we had to assume such a high uncertainty because the construction of the aperture made it very difficult to make out the diameter. This yields an irradiated area of
+\begin{equation*}
+	A_p =  77(8)\;\text{mm}^2.
+\end{equation*}
+The total power $P_{p0}$ measured by the photo diode at maximum\footnote{This is the intensity corresponding to no filter. We will refer to it with the index 0.} intensity yielded $P_{p0} = 82(1)\;\text{mW}$. So that we arrive at an irradience of
+\begin{equation*}
+	S_{p0} = 1.07(11)\;\frac{\text{mW}}{\text{mm}^2}.
+\end{equation*}
+Regarding the tools that were at our disposal at this time of the lab, we considered the SUN~2000 to be calibrated correctly. As we will show in section~\ref{sec:discussion} there is external information (see \cite{photodiode}) on the aperture of the photo diode we could not make out at the time of the lab.\mypar
+We also conducted this measurement with all filters available to us, in order to see how the modulate the intensity of the light. 
+
+\subsection{Crazy stuff}
+
+
+In order to calculate the open circuit voltage $\Uoc$ and the short circuit current density $\jsc$ for a set of measurements, we did a linear interpolation between the two closest points to the relevant axis \footnote{$j$-axis for $\Uoc$, $U$-axis for $\jsc$}, on each side of it. So if our chosen points for the calculation of $\Uoc$ are $\{(j_1,U_1),(j_2,U_2)\}$ and for $\jsc$ are $\{(j_1^\prime,U_1^\prime),(j_2^\prime,U_2^\prime)\}$, then the formulas for $\Uoc$ and $\jsc$ are as follows.
 \begin{align}
 	\Uoc = \frac{U_2 j_1 - U_1 j_2}{j_1-j_2}\quad \jsc = \frac{U_1^\prime j_2^\prime - U_2^\prime j_1^\prime}{U_1^\prime-U_2^\prime}
 \end{align}
 
 To get the maximum power density we simply multiplied the current densities and voltages and took the largest value.
 \begin{align}
-	\Pmax = \max_{i} j_i\cdot U_i
+	\Pmax = \max_{i} (j_i\cdot U_i)
 \end{align}
 
 The fill factor $FF$ is defined as the ratio of maximum power to the product of open circuit voltage and short circuit current.
@@ -43,7 +52,7 @@ The fill factor $FF$ is defined as the ratio of maximum power to the product of 
 	FF = \frac{\Pmax}{\Uoc \cdot \jsc}
 \end{align}
 
-In the case of sets $\mathbb{S}_3$ and $\mathbb{S}_\star$ we had multiple working cells. For these we decided to do all calculation with the mean of the current density over the working cells $n$ and include the standard deviation in the uncertainties of our results. The systematic errors of the current $u_{I,\text{sys}}$ and voltage $u_{U,\text{sys}}$ measurements were taken from \cite{keithley}. The uncertainty of the mean of the current density of measurement pair $p$ then is given as:
+In the case of sets $\mathbb{S}_3$ and $\mathbb{S}_\star$ we had multiple working cells. For these we decided to do all calculations with the mean of the current density over the working cells $n$ and include the standard deviation in the uncertainties of our results. The systematic errors of the current $u_{I,\text{sys}}$ and voltage $u_{U,\text{sys}}$ measurements were taken from \cite{keithley}. The uncertainty of the mean of the current density of measurement pair $p$ then is given as:
 \begin{align}
 	u_{\meann{j_p}} = \sqrt{\frac{\sigma_{j,p}^2}{N} + \meann{u_{j_p,\text{sys}}}^2}
 \end{align}
@@ -63,7 +72,7 @@ For the first set of \BHSC s $\mathbb{S}_1$, for which only one cell was not sho
 	\caption{Key parameters for set $\mathbb{S}_1$ of \BHSC s}
 	\label{tab:keyparams1}
 	\begin{tabular}{@{}ccccc@{}}\toprule
-		$i$ & $\Pmax$ [$\mu$W cm$^{-2}$] & $\jsc$ [$\mu$A $\mathrm{cm}^{-2}$] & $\Uoc$ [mV] & $FF$ [\%]\\\midrule
+		$i$ & $\Pmax$ [\textmu W cm$^{-2}$] & $\jsc$ [\textmu A $\mathrm{cm}^{-2}$] & $\Uoc$ [mV] & $FF$ [\%]\\\midrule
 		0 &  $ 22.1(12) $ & $ -149(5) $ & 424.6(4) & 34.9(21) \\
 		1 &  $ 15.9(9) $ & $ -124(4) $ & 387.6(3) & 33.0(22) \\
 		2 &  $ 9.6(5) $ & $ -70.0(24) $ & 343.7(4) & 31.7(23) \\

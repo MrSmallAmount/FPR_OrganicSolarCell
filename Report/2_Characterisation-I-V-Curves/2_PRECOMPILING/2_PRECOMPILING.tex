@@ -67,8 +67,7 @@ The uncertainty of maximum power and fill factor, as well as short circuit curre
 \subsection{First set of \BHSC s}\label{subsec:S1data}
 
 For the first set of \BHSC s $\mathbb{S}_1$, for which only one cell was not shorted, we obtained the following parameters.
-
-\begin{table}[h]\centering
+\begin{table}[H]\centering
 	\caption{Key parameters for set $\mathbb{S}_1$ of \BHSC s}
 	\label{tab:keyparams1}
 	\begin{tabular}{@{}ccccc@{}}\toprule
@@ -96,7 +95,7 @@ For the first set of \BHSC s $\mathbb{S}_1$, for which only one cell was not sho
 %	\end{tabular}
 %\end{table}
 
-In the following figure the current density measurements for four different configurations are shown. The blue rectangle indicates the short circuit current and the open circuit voltage and the orange rectangle the maximum power per area for the measurement at full intensity of incident light.
+In the following figure the current density measurements for four light intensities are shown. The blue rectangle indicates the short circuit current and the open circuit voltage and the orange rectangle the maximum power per area for the measurement at full intensity of incident light.
 
 \begin{figure}[h]\centering
 	\includegraphics[width=\columnwidth]{../../../IV-Curve-Analysis/OSC1Graph.pdf}
@@ -106,7 +105,7 @@ In the following figure the current density measurements for four different conf
 
 \subsection{Third set of \BHSC s}
 
-The calculated key parameters for the third set of cells $S_3$ is presented in the same way as in $\ref{subsec:S1data}$.
+The calculated key parameters for the third set of cells $S_3$ are presented in the same way as in $\ref{subsec:S1data}$.
 
 \begin{table}[h]\centering
 	\caption{Key parameters for set $\mathbb{S}_3$ of \BHSC s}
@@ -130,12 +129,14 @@ The calculated key parameters for the third set of cells $S_3$ is presented in t
 
 \subsection{Preassembled set of \BHSC s}
 
+For this set of cells we did not measure the size of the Galinstan droplets, so in order to do the same calculations, we used the average of the measured areas and the average uncertainty as well $A_\star = \langle A_{kn} \rangle_{kn}$, $u_{A_\star} = \langle u_{A_{kn}}  \rangle_{kn}$.
+
 \begin{table}[h]\centering
 	\caption{Key parameters for set $\mathbb{S}_\star$ of \BHSC s}
 	\label{tab:keyparamsstar}
 	\begin{tabular}{@{}ccccc@{}}\toprule
 		$i$ & $\Pmax$ [$\mu$W cm$^{-2}$] & $\jsc$ [$\mu$A $\mathrm{cm}^{-2}$] & $\Uoc$ [mV] & $FF$ [\%]\\\midrule
-		0 &   10.4(12)  &  -49(3)  & 747(6) & 28(3) \\
+		0 &   10.4(12)  &  -49(3)  & 747(6) & 28(3) \\ 
 		1 &   8.2(8)  &  -41.4(22)  & 716(8) & 27.7(29) \\
 		2 &   4.7(4)  &  -23.7(12)  & 704(7) & 28.4(29) \\
 		3 &   2.60(23)  &  -12.8(7)  & 692(8) & 29(3) \\
@@ -144,7 +145,7 @@ The calculated key parameters for the third set of cells $S_3$ is presented in t
 	\end{tabular}
 \end{table}
 
-\begin{figure}[h]\centering
+\begin{figure}[H]\centering
 	\includegraphics[width=\columnwidth]{../../../IV-Curve-Analysis/OSCPGraph.pdf}
 	\caption{Current density measurements for the set $\mathbb{S}_\star$}
 	\label{fig:OSCstarGraph}

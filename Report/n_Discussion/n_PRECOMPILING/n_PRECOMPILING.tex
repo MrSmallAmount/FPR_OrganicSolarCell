@@ -20,14 +20,16 @@
 \begin{document}\begin{extract*}
 
 \section{Discussion}\label{sec:discussion}
-The theoretical model for a photo generated current with a single diode, taking serial $R_s$ and shunt $R_{sh}$ resistances into account predicts the voltage dependent current to have the following implicit shape.\cite{source10}
+The theoretical model for a photo generated current with a single diode, taking serial $R_s$ and shunt $R_{sh}$ resistances into account predicts the current to have the following implicit shape.\cite{source10}
 
 \begin{align}
-	I\left(1+\frac{R_s}{R_{sh}}\right)-\frac{U}{R_{sh}} = I_s\exp\left(\frac{e}{b k_B T}(U-I R_s)-1\right)-I_{ph}
+	I\left(1+\frac{R_s}{R_{sh}}\right)-\frac{U}{R_{sh}} = I_s\exp\left(\frac{e(U-I R_s)}{n k_B T}-1\right)-I_{ph}
 \end{align}
 
-Here the photogenerated current is $I_{ph}$ and the saturation current under reverse bias $I_s$, as in the current at which point the current is invariant to an increase of the voltage. $e$ is the elementary charge, $k_B$ the Boltzmann-constant, $T$ the temperature and $b$ is a factor representing the quality of the diode itself, being 1 if it's ideal. In order to maximize the fill factor, one would want to minimize the serial resistance and maximize the shunt resistance.\\
-The shunt resistance stems from
+Here the photogenerated current is $I_{ph}$ and the saturation current under reverse bias $I_s$, as in the current at which point the current is invariant to an increase of the voltage. $e$ is the elementary charge, $k_B$ the Boltzmann-constant, $T$ the temperature and $n$ is the ideality factor describing how well the cell can be described with the ideal diode equation, being 1 if it's ideal. The shunt resistance relates to parasitic currents moving directly between the electrodes\cite{source11}.
+\\\textbf{more here (?)}\\
+The first set $\mathbb{S}_1$'s
+
 
 \end{extract*}
 \end{document}

@@ -1,7 +1,34 @@
 
 \section{Improvements}
-If we look at table~\ref{tab:assemb-table} and assume that $\mathbb{S}_1$ and $\mathbb{S}_2$ could have had two additional cells, then a total of 22 \BHSC’s should have been assembled. Out of these 22 possible cells only 5 demonstrated basic functionality. If we want to think about how we can improve our solar cells then we have to discuss how the assembly process can be improved.
+If we look at table~\ref{tab:assemb-table} and assume that $\mathbb{S}_1$ and $\mathbb{S}_2$ could have held two additional cells, then a total of 22 working \BHSC’s could have been assembled. Out of these 22 cells only 5 demonstrated basic functionality. If we want to think about how we can improve our solar cells then we have to discuss how the assembly process can be improved.
 
 \subsection{Tools for the assembly}
-When performing any manipulation on a set, we used a pair of tweezers to fixate it. We are certain that the tweezers are a great tool for this application. But when it comes to moving a set of cells from one table to the other this can quickly lead to a situation that accured with $\mathbb{S}_4$ where we accidentally dropped it. The pair of tweezers had to be bent to fit the width of the glass substrate and subsequently holding the substrate under tension ,gives rise to the tweezers snapping together.
+When performing any manipulation on a set, we used a pair of tweezers to fixate it. We are certain that the tweezers are a great tool for this type of application, but when it comes to \emph{moving} a set of cells from one table to the other, this can quickly lead to contamination. Performing the spin coating for each active layer, involved grabbing the sets by hand or with the tweezers and moving them. But in order to lift a set with the tweezers at our disposal, the glass substrate had to be held under tension which makes the whole system very sensitive to perturbations. Combined with the fact that this way of holding a set is subject to skill and we were two experimenters, set $\mathbb{S}_4$ dropped in the process of moving it to the spin coater.\mypar
+The minimal solution to this problem would the introduction of a bigger pair of tweezers that do not have be spread apart in order to grab a set. But because the tweezers proved to be sufficient for fixating the substrates, we want to propose an established multipurpose tool for moving a set of \BHSC's that is often found in microscopy tool sets.
+
+\begin{figure}[h]\centering
+\includegraphics[width=\columnwidth]{../n-1_Pictures/Schnittfaenger.png}
+\caption{Version of a "Schnittfänger" sold in a microscopy tool set made by BRESSER.}
+\label{fig:cutcatcher}
+\end{figure}
+Figure~\ref{fig:cutcatcher} shows a version of the tool we are talking about. A Schnittfänger\footnote{We did not find a proper translation for it.} is a multipurpose spatula with a flexible and thin blade that is produced in various widths. In our use case and in combination with tweezers, it makes a great tool for picking up the delicate glass substrates or getting it out of the spin coater and holding it without any tension involved.\mypar
+As visible in figures~\ref{fig:realblob} and \ref{fig:realblob2}, we also applied silver contacts onto the substrates to establish a better contact when modulating the voltage. This was done by using a brush that was soaked in a silver solution. As the characteristic dimensions of the brush were around three times as big as the width $w$ of the ITO stripe, we had poor overall control when applying the silver contacts. This resulted in the situation depicted in figure~\ref{fig:realblob3} where a drop of silver came off the brush and dried on the substrates surface.
+
+\begin{figure}[h]\centering
+\includegraphics[width=0.9\columnwidth]{../n-1_Pictures/cell1.png}
+\caption{Assembled set $\mathbb{S}_1$ with ruler next to it. A drop of silver contact is visible in the upper right corner of the prepared substrate.}
+\label{fig:realblob3}
+\end{figure}
+
+As the silver solution in the brush also dried out very fast, applying homogeneous contacts proved to be very difficult. An example is visible in figure~\ref{fig:realblob2} in the upper right corner of the substrate where we did not manage to recover a homogeneous contact.\mypar
+We propose the use of disposable pipettes\footnote{Disposable pipette tips would be a great alternative.} in combination with a brush which contains a minimal amount of silver solution on it. Disposable pipettes are a standard in every chemistry lab and with the ability to control the amount of silver brought onto the substrate one can spread this amount evenly with the brush to achieve homogeneous and precise contacts of appropriate thickness.
+
+\subsection{Pressure in evaporation process}
+
+With $p_0$ described in section~\ref{subsec:therm-eval} we met the requirements of a base pressure of $p_0<10^{-7}\;\text{mbar}$ (see \cite{labdesc} section 3.2). But we positioned the sample holder over the filament when the pressure was unstable and continued to increase the current flowing through the aluminum filament. This resulted in pressures of around $1.6(1)\cdot10^{-6}\;\text{mbar}$.\mypar
+Given the drawbacks of insufficient pressures mentioned in \cite{labdesc}, waiting longer for the pressure to stabilize and decrease might prove to have a significant impact on performance and functionality.
+
+
+
+
 

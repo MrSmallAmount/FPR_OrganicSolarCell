@@ -51,6 +51,11 @@ The fill factor $FF$ is defined as the ratio of maximum power to the product of 
 FF = \frac{\Pmax}{\Uoc \cdot \jsc}
 \end{align}
 
+Finally the maximum power conversion efficiency $\eta$ is defined as the ratio of maximum power density to the irradiance of the incident light.
+\begin{align}
+\eta = \frac{\Pmax}{S_p}
+\end{align}
+
 In the case of sets $\mathbb{S}_3$ and $\mathbb{S}_\star$ we had multiple working cells. For these we decided to do all calculations with the mean of the current density over the working cells $n$ and include the standard deviation in the uncertainties of our results. The systematic errors of the current $u_{I,\text{sys}}$ and voltage $u_{U,\text{sys}}$ measurements were taken from \cite{keithley}. The uncertainty of the mean of the current density of measurement pair $p$ then is given as:
 \begin{align}
 u_{\meann{j_p}} = \sqrt{\frac{\sigma_{j,p}^2}{N} + \meann{u_{j_p,\text{sys}}}^2}
@@ -61,11 +66,11 @@ With sample size $N$ being the amount of working cells of the set and the system
 u_{j_{pn},\text{sys}} = \sqrt{ \left( \frac{ u_{I_{pn},\text{sys}}}{A_n}\right)^2+\left( j_{pn}\frac{u_{A_n}}{A_n} \right)^2}
 \end{align}
 
-The uncertainty of maximum power and fill factor, as well as short circuit current and open circuit voltage can then be obtained through Gaußian error propagation.
+The uncertainties of the other parameters can then be obtained through Gaußian error propagation.
 
 \subsection{First set of \BHSC s}\label{subsec:S1data}
 
-For the first set of \BHSC s $\mathbb{S}_1$, for which only one cell was not shorted, we obtained the following parameters.
+For the first set of \BHSC s $\mathbb{S}_1$, for which only one cell was not shorted, we obtained the following parameters in descending order of light intensity.
 %\begin{table}[H]\centering
 % \caption{Key parameters for set $\mathbb{S}_1$ of \BHSC s}
 % \label{tab:keyparams1}
@@ -93,8 +98,8 @@ For the first set of \BHSC s $\mathbb{S}_1$, for which only one cell was not sho
 % \usepackage{booktabs}
 % Please add the following required packages to your document preamble:
 % \usepackage{booktabs}
-\begin{table}[]
-\begin{tabular}{@{}lclc@{}}
+\begin{table}[h]
+\begin{tabular}{@{}cccc@{}}
 \toprule
 \multicolumn{1}{c}{$\Pmax$ [\textmu W cm$^{-2}$]} & $\jsc$ [\textmu A $\mathrm{cm}^{-2}$] & \multicolumn{1}{c}{$\Uoc$ [mV]} & $FF$ [\%] \\ \midrule
 \multicolumn{1}{c}{$ 22.1(12) $}                  & $ -149(5) $                           & \multicolumn{1}{c}{424.6(4)}    & 34.9(21)  \\
@@ -103,28 +108,16 @@ For the first set of \BHSC s $\mathbb{S}_1$, for which only one cell was not sho
 \multicolumn{1}{c}{$ 2.55(21) $}                  & $ -37.0(13) $                         & \multicolumn{1}{c}{235.2(4)}    & 29.3(26)  \\
 \multicolumn{1}{c}{$ 0.75(9) $}                   & $ -19.7(7) $                          & \multicolumn{1}{c}{131.3(3)}    & 29(4)     \\
 \multicolumn{1}{c}{$ 0.18(5) $}                   & $ -10.5(4) $                          & \multicolumn{1}{c}{70.93(22)}   & 24(6)     \\ \midrule
-\multicolumn{2}{l}{$S_{pi}$ [mW mm$^{-2}$]}                                               & \multicolumn{2}{l}{$\eta$ [\%]}             \\
-\multicolumn{2}{l}{1.06(11)}                                                              & \multicolumn{2}{l}{0.0207(24)}              \\
-\multicolumn{2}{l}{0.94(10)}                                                              & \multicolumn{2}{l}{0.0170(20)}              \\
-\multicolumn{2}{l}{0.51(5)}                                                               & \multicolumn{2}{l}{0.0151(19)}              \\
-\multicolumn{2}{l}{0.29(3)}                                                               & \multicolumn{2}{l}{0.0089(13)}              \\
-\multicolumn{2}{l}{0.169(22)}                                                             & \multicolumn{2}{l}{0.0045(8)}               \\
-\multicolumn{2}{l}{0.104(17)}                                                             & \multicolumn{2}{l}{0.0017(5)}               \\ \bottomrule
+\multicolumn{2}{c}{$S_{pi}$ [mW mm$^{-2}$]}                                               & \multicolumn{2}{c}{$\eta$ [\%]}             \\\midrule
+\multicolumn{2}{c}{1.06(11)}                                                              & \multicolumn{2}{c}{0.0207(24)}              \\
+\multicolumn{2}{c}{0.94(10)}                                                              & \multicolumn{2}{c}{0.0170(20)}              \\
+\multicolumn{2}{c}{0.51(5)}                                                               & \multicolumn{2}{c}{0.0151(19)}              \\
+\multicolumn{2}{c}{0.29(3)}                                                               & \multicolumn{2}{c}{0.0089(13)}              \\
+\multicolumn{2}{c}{0.169(22)}                                                             & \multicolumn{2}{c}{0.0045(8)}               \\
+\multicolumn{2}{c}{0.104(17)}                                                             & \multicolumn{2}{c}{0.0017(5)}               \\ \bottomrule
 \end{tabular}
 \end{table}
-%\begin{table}[h]\centering
-% \caption{Key parameters for set $\mathbb{S}_1$ of \BHSC s}
-% \label{tab:keyparams}
-% \begin{tabular}{@{}ccccccc@{}}\toprule
-% $i$ & 0 & 1 & 2 & 3 & 4 & 5\\\midrule
-% $S_i$ [mW cm$^{-2}$]     & 100 &  & $ -149(5) $ & $  \pm  $ & $  \pm  $ & \\
-% $\Pmax$ [$\mu$W cm$^{-2}$] & 22.1(12) & $ 15.9(9) $ & $ 9.6(5) $ & 2.55(21) & 0.75(9) &  0.18(5)\\
-% $\jsc$ [$\mu$A cm$^{-2}$]  & - & 9.6(5) & $ -70.0(24) $ & $  \pm  $ & $  \pm  $ & \\
-% $\Uoc$ & - & $ 2.55(21) $ & $  $ & $  \pm  $ & $  \pm  $ & \\
-% $FF$ & - & $ 0.75(9) $ & $ -19.7(7) $ & $  \pm  $ & $  \pm  $ & \\
-% 5 & - & $ 0.18(5) $ & $ -10.5(4) $ & $  \pm  $ & $  \pm  $ & \\\midrule
-% \end{tabular}
-%\end{table}
+
 
 In the following figure the current density measurements for four light intensities are shown. The blue rectangle indicates the short circuit current and the open circuit voltage and the orange rectangle the maximum power per area for the measurement at full intensity of incident light.
 
@@ -136,21 +129,28 @@ In the following figure the current density measurements for four light intensit
 
 \subsection{Third set of \BHSC s}
 
-The calculated key parameters for the third set of cells $S_3$ are presented in the same way as in $\ref{subsec:S1data}$.
+The calculated key parameters for the third set of cells $S_3$, which have the same architecture as set $S_1$ are presented in the same way as in $\ref{subsec:S1data}$.
 
-\begin{table}[h]\centering
-\caption{Key parameters for set $\mathbb{S}_3$ of \BHSC s}
-\label{tab:keyparams3}
-\begin{tabular}{@{}ccccc@{}}\toprule
-$i$ & $\Pmax$ [$\mu$W cm$^{-2}$] & $\jsc$ [$\mu$A $\mathrm{cm}^{-2}$] & $\Uoc$ [mV] & $FF$ [\%]\\\midrule
-0 &   16.2(14)  &  -111(6)  & 515(5) & 28.2(29) \\
-1 &   13.5(13)  &  -95(5)  & 505(5) & 28(3) \\
-2 &   7.4(6)  &  -52.7(27)  & 478.9(24) & 29.3(29) \\
-3 &   4.0(3)  &  -28.1(14)  & 455.1(29) & 31(3) \\
-4 &   2.11(17)  &  -15.0(8)  & 431.2(20) & 33(3)\\
-5 &  1.11(9)  &  -8.0(4)  & 406.44(27) & 34(3) \\\bottomrule
+\begin{table}[]
+\begin{tabular}{@{}cccc@{}}
+\toprule
+$\Pmax$ [$\mu$W cm$^{-2}$] & $\jsc$ [$\mu$A $\mathrm{cm}^{-2}$] & $\Uoc$ [mV]     & $FF$ [\%]     \\ \midrule
+16.2(14)                   & -111(6)                            & 515(5)          & 28.2(29)      \\
+13.5(13)                   & -95(5)                             & 505(5)          & 28(3)         \\
+7.4(6)                     & -52.7(27)                          & 478.9(24)       & 29.3(29)      \\
+4.0(3)                     & -28.1(14)                          & 455.1(29)       & 31(3)         \\
+2.11(17)                   & -15.0(8)                           & 431.2(20)       & 33(3)         \\
+1.11(9)                    & -8.0(4)                            & 406.44(27)      & 34(3)         \\ \midrule
+\multicolumn{2}{c}{$S_p$ [mW mm$^{-2}$]}                        & \multicolumn{2}{c}{$S_p$ [mW mm$^{-2}$]} \\ \midrule
+\multicolumn{2}{c}{1.06(11)}                                    & \multicolumn{2}{c}{0.0152(21)}  \\
+\multicolumn{2}{c}{0.94(10)}                                    & \multicolumn{2}{c}{0.0144(20)}  \\
+\multicolumn{2}{c}{0.51(5)}                                     & \multicolumn{2}{c}{0.0146(20)}  \\
+\multicolumn{2}{c}{0.29(3)}                                     & \multicolumn{2}{c}{0.0139(19)}  \\
+\multicolumn{2}{c}{0.169(22)}                                   & \multicolumn{2}{c}{0.0125(19)}  \\
+\multicolumn{2}{c}{0.104(17)}                                   & \multicolumn{2}{c}{0.0107(19)}  \\ \bottomrule
 \end{tabular}
 \end{table}
+
 
 \begin{figure}[h]\centering
 \includegraphics[width=\columnwidth]{../../../IV-Curve-Analysis/OSC2Graph.pdf}
@@ -161,20 +161,26 @@ $i$ & $\Pmax$ [$\mu$W cm$^{-2}$] & $\jsc$ [$\mu$A $\mathrm{cm}^{-2}$] & $\Uoc$ [
 \subsection{Preassembled set of \BHSC s}
 
 For this set of cells we did not measure the size of the Galinstan droplets, so in order to do the same calculations, we used the average of the measured areas and the average uncertainty as well $A_\star = \langle A_{kn} \rangle_{kn}$, $u_{A_\star} = \langle u_{A_{kn}}  \rangle_{kn}$.
-
-\begin{table}[h]\centering
-\caption{Key parameters for set $\mathbb{S}_\star$ of \BHSC s}
-\label{tab:keyparamsstar}
-\begin{tabular}{@{}ccccc@{}}\toprule
-$i$ & $\Pmax$ [$\mu$W cm$^{-2}$] & $\jsc$ [$\mu$A $\mathrm{cm}^{-2}$] & $\Uoc$ [mV] & $FF$ [\%]\\\midrule
-0 &   10.4(12)  &  -49(3)  & 747(6) & 28(3) \\
-1 &   8.2(8)  &  -41.4(22)  & 716(8) & 27.7(29) \\
-2 &   4.7(4)  &  -23.7(12)  & 704(7) & 28.4(29) \\
-3 &   2.60(23)  &  -12.8(7)  & 692(8) & 29(3) \\
-4 &   1.43(13)  &  -7.0(3)  & 694(7) & 30(3)\\
-5 &  0.75(7)  &  -3.73(21)  & 651(10) & 31(4) \\\bottomrule
+\begin{table}[]
+\begin{tabular}{@{}cccc@{}}
+\toprule
+$\Pmax$ [$\mu$W cm$^{-2}$] & $\jsc$ [$\mu$A $\mathrm{cm}^{-2}$] & $\Uoc$ [mV]          & $FF$ [\%]         \\ \midrule
+10.4(12)                   & -49(3)                             & 747(6)               & 28(3)             \\
+8.2(8)                     & -41.4(22)                          & 716(8)               & 27.7(29)          \\
+4.7(4)                     & -23.7(12)                          & 704(7)               & 28.4(29)          \\
+2.60(23)                   & -12.8(7)                           & 692(8)               & 29(3)             \\
+1.43(13)                   & -7.0(3)                            & 694(7)               & 30(3)             \\
+0.75(7)                    & -3.73(21)                          & 651(10)              & 31(4)             \\ \midrule
+\multicolumn{2}{c}{$S_p$ [mW mm$^{-2}$]}                        & \multicolumn{2}{c}{$S_p$ [mW mm$^{-2}$]} \\ \midrule
+\multicolumn{2}{c}{1.06(11)}                                    & \multicolumn{2}{c}{0.0097(15)}           \\
+\multicolumn{2}{c}{0.94(10)}                                    & \multicolumn{2}{c}{0.0088(12)}           \\
+\multicolumn{2}{c}{0.51(5)}                                     & \multicolumn{2}{c}{0.0094(13)}           \\
+\multicolumn{2}{c}{0.29(3)}                                     & \multicolumn{2}{c}{0.0091(13)}           \\
+\multicolumn{2}{c}{0.169(22)}                                   & \multicolumn{2}{c}{0.0084(13)}           \\
+\multicolumn{2}{c}{0.104(17)}                                   & \multicolumn{2}{c}{0.0073(13)}           \\ \bottomrule
 \end{tabular}
 \end{table}
+
 
 \begin{figure}[H]\centering
 \includegraphics[width=\columnwidth]{../../../IV-Curve-Analysis/OSCPGraph.pdf}

@@ -34,18 +34,10 @@ It is evident from table~\ref{tab:reracomp} that our measured results are defici
 
 
 \subsection{Calculation of key parameters}\label{subsec:calckeyparams}
-<<<<<<< HEAD
-In order to calculate the open circuit voltage $\Uoc$ and the short circuit current density $\jsc$ for a set of measurements, we performed a linear interpolation for each quantity. For each interpolation we used
-
- between the two closest points to the relevant axis\footnote{Being the $j$-axis for $\Uoc$ and the $U$-axis for $\jsc$.}, on each side of it. So if our chosen points for the calculation of $\Uoc$ are $\{(j_1,U_1),(j_2,U_2)\}$ and for $\jsc$ are $\{(j_1^\prime,U_1^\prime),(j_2^\prime,U_2^\prime)\}$, then the formulas for $\Uoc$ and $\jsc$ are as follows.
-\begin{align}
-\Uoc = \frac{U_2 j_1 - U_1 j_2}{j_1-j_2}\quad \jsc = \frac{U_1^\prime j_2^\prime - U_2^\prime j_1^\prime}{U_1^\prime-U_2^\prime}
-=======
 In order to calculate the open circuit voltage $\Uoc$ and the short circuit current density $\jsc$ for a set of measurements, we performed a linear interpolation for each quantity. For each interpolation we used the two closest points to the relevant axis\footnote{Being the $j$-axis for $\Uoc$ and the $U$-axis for $\jsc$.} that were separated by it.\mypar
 That means we will introduce two sets of points. For $\Uoc$ we choose $\{(j_1,U_1),(j_2,U_2)\}$ and for $\jsc$ we choose $\{(j_1^\prime,U_1^\prime),(j_2^\prime,U_2^\prime)\}$, for which the relationships for $\Uoc$ and $\jsc$ are
 \begin{align}\label{eq:interpol}
 \Uoc = \frac{U_2 j_1 - U_1 j_2}{j_1-j_2}\quad\text{and}\quad \jsc = \frac{U_1^\prime j_2^\prime - U_2^\prime j_1^\prime}{U_1^\prime-U_2^\prime}\;.
->>>>>>> c4ac403ad3a5a81a56b668504f212ce32bde9987
 \end{align}
 To get the maximum power density we simply multiplied the all current densities and voltages and used the Python package \texttt{NumPy} to find the largest value.
 \begin{align}

@@ -87,7 +87,7 @@ Uncertainties of all other expressions mentioned like equation~\ref{eq:interpol}
 \subsection{First set}\label{subsec:S1data}
 
 For the first set $\mathbb{S}_1$ of \BHSC's, for which only one cell was not shorted, we obtained the following parameters in descending order of light intensity.
-\begin{table}[h]
+\begin{table}[ht]
 	\caption{Overview of all obtained key parameters of set $\mathbb{S}_1$. Each row of the upper part of the table corresponds to the row in the lower half of the table. Depicted are all key parameters corresponding to each intensity.}
 	\begin{tabular}{@{}c@{\hspace{-0.5ex}}ccc@{}}
 		\toprule
@@ -108,7 +108,7 @@ For the first set $\mathbb{S}_1$ of \BHSC's, for which only one cell was not sho
 	\end{tabular}
 \end{table}
 
-In figure~\ref{fig:OSC1Graph} the current density measurements for four light intensities are shown. The blue rectangle indicates the short circuit current and the open circuit voltage and the orange rectangle the maximum power per area for the measurement at full intensity of incident light.
+In figure~\ref{fig:OSC1Graph} the current density measurements for four light intensities are shown. Similar to \cite{source1} we wanted to achieve a clear visualization for the key parameters. The blue rectangle indicates the product of short circuit current and open circuit voltage and the orange rectangle the maximum power per area for the measurement at full intensity of incident light.
 
 \begin{figure}[ht]\centering
 	\includegraphics[width=\columnwidth]{../../../IV-Curve-Analysis/OSC1Graph.pdf}
@@ -116,12 +116,12 @@ In figure~\ref{fig:OSC1Graph} the current density measurements for four light in
 	\label{fig:OSC1Graph}
 \end{figure}
 
-\subsection{Third set of \BHSC s}
+\subsection{Third set}
 
-The calculated key parameters for the third set of cells $\mathbb{S}_3$, which have the same architecture as set $\mathbb{S}_1$ (see table~\ref{tab:assemb-table}) are presented in the same way as in section~$\ref{subsec:S1data}$. For the results see table~\ref{tab:OSC3table}
+We present the calculated key parameters for the third set of cells $\mathbb{S}_3$, which have the same architecture as set $\mathbb{S}_1$ (see table~\ref{tab:assemb-table}), analogously to section~$\ref{subsec:S1data}$. For the results see table~\ref{tab:OSC3table} and figure~\ref{fig:OSC3Graph}.
 
-\begin{table}[h]
-	\caption{Overview of all obtained key parameters of set $\mathbb{S}_1$. Each row of the upper part of the table corresponds to the row in the lower half of the table. Depicted are all key parameters corresponding to each intensity.}
+\begin{table}[ht]
+	\caption{Overview of all obtained key parameters of set $\mathbb{S}_3$. Each row of the upper part of the table corresponds to the row in the lower half of the table. Depicted are all key parameters corresponding to each intensity.}
 	\label{tab:OSC3table}
 	\begin{tabular}{@{}cccc@{}}
 		\toprule
@@ -142,17 +142,15 @@ The calculated key parameters for the third set of cells $\mathbb{S}_3$, which h
 	\end{tabular}
 \end{table}
 
-
-\begin{figure}[h]\centering
+\begin{figure}[ht]\centering
 	\includegraphics[width=\columnwidth]{../../../IV-Curve-Analysis/OSC2Graph.pdf}
-	\caption{Current density measurements for the set $\mathbb{S}_3$}
+	\caption{Current density measurements of set $\mathbb{S}_1$ for different light intensities.}
 	\label{fig:OSC3Graph}
 \end{figure}
 
-\subsection{Preassembled set of \BHSC s}
-
-For this set of cells we did not measure the size of the Galinstan droplets, so in order to do the same calculations, we used the average of the measured areas and the average uncertainty as well $A_\star = \langle A_{kn} \rangle_{kn}$, $u_{A_\star} = \langle u_{A_{kn}}  \rangle_{kn}$. Because of this we can't really trust the exact values of the data, but the shape should remain the same.
-\begin{table}[]
+\begin{table}[ht]
+	\caption{Overview of all obtained key parameters of set $\mathbb{S}_\star$. Each row of the upper part of the table corresponds to the row in the lower half of the table. Depicted are all key parameters corresponding to each intensity.}
+	\label{tab:OSCstartable}
 	\begin{tabular}{@{}cccc@{}}
 		\toprule
 		$\Pmax$ [$\mu$W cm$^{-2}$] & $\jsc$ [$\mu$A $\mathrm{cm}^{-2}$] & $\Uoc$ [mV]          & $FF$ [\%]         \\ \midrule
@@ -173,11 +171,16 @@ For this set of cells we did not measure the size of the Galinstan droplets, so 
 \end{table}
 
 
-\begin{figure}[H]\centering
+\begin{figure}[ht]\centering
 	\includegraphics[width=\columnwidth]{../../../IV-Curve-Analysis/OSCPGraph.pdf}
 	\caption{Current density measurements for the set $\mathbb{S}_\star$}
 	\label{fig:OSCstarGraph}
 \end{figure}
+
+
+\subsection{Preassembled set}
+
+For this set of cells we did not measure the size of the Galinstan droplets, so in order to do the same calculations, we used the average of the measured areas and the average uncertainty as well $A_\star = \langle A_{kn} \rangle_{kn}$, $u_{A_\star} = \langle u_{A_{kn}}  \rangle_{kn}$. Because of this we can't really trust the exact values of the data, but the shape should remain the same.
 
 \end{extract*}
 \end{document}

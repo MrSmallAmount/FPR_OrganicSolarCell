@@ -3,26 +3,35 @@
 
 In order to characterize the assembled sets of \BHSC's, we used the Keithley~2602A~Sourcemeter and ABET~Technologies’ solar simulator SUN~2000. The simulator reproduces the AM 1.5 global reference spectrum and was also equipped with 5 different filters for varying the light intensity. Using the source meter we applied sequences of voltages to the cells and measured the currents resulting from their irradiation. This was done at different levels of intensity of light as well as darkness for which we covered each set with a plastic box.
 \subsection{Irradiance calibration}
-To ensure that the SUN~2000 was calibrated to yield an irradience of $1\;\text{mW}\!\cdot\text{mm}^{-2}$, we used the Laser~Point PD-500-D9-VIS. With a digital caliper we measured the aperture of the photo diode to have a diameter of $d_p = 9.9(5)\;\text{mm}$. Here we had to assume such a high uncertainty because the construction of the aperture made it very difficult to make out the diameter. This yields an irradiated area of
+To ensure that the SUN~2000 was calibrated to yield an irradiance of $1\;\text{mW}\!\cdot\text{mm}^{-2}$, we used the Laser~Point PD-500-D9-VIS. With a digital caliper we measured the aperture of the photo diode to have a diameter of $d_p = 9.9(5)\;\text{mm}$. Here we had to assume such a high uncertainty because the construction of the aperture made it very difficult to make out the diameter. This yields an irradiated area of
 \begin{equation*}
 A_p =  77(8)\;\text{mm}^2.
 \end{equation*}
-The total power $P_{p0}$ measured by the photo diode at maximum\footnote{This is the intensity corresponding to no filter. We will refer to it with the index 0.} intensity yielded $P_{p0} = 82(1)\;\text{mW}$. So that we arrive at an irradience of
+The total power $P_{p0}$ measured by the photo diode at maximum\footnote{This is the intensity corresponding to no filter. We will refer to it with the index 0.} intensity yielded $P_{p0} = 82(1)\;\text{mW}$. So that we arrive at an irradiance of
 \begin{equation*}
 S_{p0} = 1.07(11)\;\frac{\text{mW}}{\text{mm}^2}.
 \end{equation*}
 Regarding the tools that were at our disposal at this time of the lab, we considered the SUN~2000 to be calibrated correctly. As we will show in section~\ref{sec:discussion} there is external information (see \cite{photodiode}) on the aperture of the photo diode we could not make out at the time of the lab.\mypar
-We also conducted this measurement with all filters available to us, in order to see how they modulate the intensity of the light.\\
+We also conducted this measurement with all filters available to us, in order to see how they modulate the intensity of the light.
+\begin{figure}[h]
+\includegraphics[scale=0.5]{../2_Pictures/Photodiode_irradiance.pdf}
+\caption{With Laser~Point PD-500-D9-VIS measured irradiances $S_{pi}$ for each filter $i$.}
+\label{fig:photodiode_irradiances}
+\end{figure}
+
+So we now know that the filters \emph{do not} modulate the intensity of the light linearly.\mypar
 We also did measurements of I-V-curves using a silicon reference cell, particularly a Rera RR-1000, for which we know what the parameters should be\cite{reracat} if irradiated with the AM 1.5 global reference spectrum.
 \begin{table}[h]
 \centering
-\begin{tabular}{@{}ccc@{}}\toprule
-& Given as reference\cite{reracat} & Measured\\
-$\jsc$ [mA cm$^{-2}$] & & \\
-$\Uoc$ & &
-
+\begin{tabular}{@{}lcc@{}}\toprule
+& Given as reference\cite{reracat} & Measured\\\midrule
+$\jsc$ [mA cm$^{-2}$] & 32.7 & 32.783(16) \\
+$\Uoc$ [mV]& 596 & \\
+$FF$ [\%] & 78.4 & \\\bottomrule
 \end{tabular}
 \end{table}
+
+
 
 \subsection{Crazy stuff}
 

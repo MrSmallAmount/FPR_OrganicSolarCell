@@ -46,14 +46,14 @@ We also did measurements of I-V-curves using a silicon reference cell, particula
 	\begin{tabular}{@{}lcc@{}}\toprule
 		& Given as reference\cite{reracat} & Measured\\\midrule
 		$\jsc$ [mA cm$^{-2}$] & 32.7 & 32.783(16) \\
-		$\Uoc$ [mV]& 596 & \\
-		$FF$ [\%] & 78.4 & \\\bottomrule
+		$\Uoc$ [mV]& 596 & 596.3(4) \\
+		$FF$ [\%] & 78.4 & 65.51(9) \\\bottomrule
 	\end{tabular}
 \end{table}
 
 
 
-\subsection{Crazy stuff}
+\subsection{Calculation of key parameters}
 
 
 In order to calculate the open circuit voltage $\Uoc$ and the short circuit current density $\jsc$ for a set of measurements, we did a linear interpolation between the two closest points to the relevant axis \footnote{$j$-axis for $\Uoc$, $U$-axis for $\jsc$}, on each side of it. So if our chosen points for the calculation of $\Uoc$ are $\{(j_1,U_1),(j_2,U_2)\}$ and for $\jsc$ are $\{(j_1^\prime,U_1^\prime),(j_2^\prime,U_2^\prime)\}$, then the formulas for $\Uoc$ and $\jsc$ are as follows.
@@ -86,20 +86,52 @@ The uncertainty of maximum power and fill factor, as well as short circuit curre
 \subsection{First set of \BHSC s}\label{subsec:S1data}
 
 For the first set of \BHSC s $\mathbb{S}_1$, for which only one cell was not shorted, we obtained the following parameters.
-\begin{table}[H]\centering
-	\caption{Key parameters for set $\mathbb{S}_1$ of \BHSC s}
-	\label{tab:keyparams1}
-	\begin{tabular}{@{}ccccc@{}}\toprule
-		$i$ & $\Pmax$ [\textmu W cm$^{-2}$] & $\jsc$ [\textmu A $\mathrm{cm}^{-2}$] & $\Uoc$ [mV] & $FF$ [\%]\\\midrule
-		0 &  $ 22.1(12) $ & $ -149(5) $ & 424.6(4) & 34.9(21) \\
-		1 &  $ 15.9(9) $ & $ -124(4) $ & 387.6(3) & 33.0(22) \\
-		2 &  $ 9.6(5) $ & $ -70.0(24) $ & 343.7(4) & 31.7(23) \\
-		3 &  $ 2.55(21) $ & $ -37.0(13) $ & 235.2(4) & 29.3(26) \\
-		4 &  $ 0.75(9) $ & $ -19.7(7) $ & 131.3(3) & 29(4)\\
-		5 &  $ 0.18(5) $ & $ -10.5(4) $ & 70.93(22) & 24(6) \\\bottomrule
+%\begin{table}[H]\centering
+%	\caption{Key parameters for set $\mathbb{S}_1$ of \BHSC s}
+%	\label{tab:keyparams1}
+%	\begin{tabular}{@{}ccccc@{}}\toprule
+%		$i$ & $\Pmax$ [\textmu W cm$^{-2}$] & $\jsc$ [\textmu A $\mathrm{cm}^{-2}$] & $\Uoc$ [mV] & $FF$ [\%]\\\midrule
+%		0 &  $ 22.1(12) $ & $ -149(5) $ & 424.6(4) & 34.9(21) \\
+%		1 &  $ 15.9(9) $ & $ -124(4) $ & 387.6(3) & 33.0(22) \\
+%		2 &  $ 9.6(5) $ & $ -70.0(24) $ & 343.7(4) & 31.7(23) \\
+%		3 &  $ 2.55(21) $ & $ -37.0(13) $ & 235.2(4) & 29.3(26) \\
+%		4 &  $ 0.75(9) $ & $ -19.7(7) $ & 131.3(3) & 29(4)\\
+%		5 &  $ 0.18(5) $ & $ -10.5(4) $ & 70.93(22) & 24(6) \\
+%	\end{tabular}
+%\end{table}
+%\begin{table}[h]
+%	\centering
+%	\begin{tabular}{@{}ccc@{}}
+%		i & irradiance $S_{pi} []$
+%	\end{tabular}
+%\end{table}
+% Please add the following required packages to your document preamble:
+% \usepackage{booktabs}
+% Please add the following required packages to your document preamble:
+% \usepackage{booktabs}
+% Please add the following required packages to your document preamble:
+% \usepackage{booktabs}
+% Please add the following required packages to your document preamble:
+% \usepackage{booktabs}
+\begin{table}[]
+	\begin{tabular}{@{}lclc@{}}
+		\toprule
+		\multicolumn{1}{c}{$\Pmax$ [\textmu W cm$^{-2}$]} & $\jsc$ [\textmu A $\mathrm{cm}^{-2}$] & \multicolumn{1}{c}{$\Uoc$ [mV]} & $FF$ [\%] \\ \midrule
+		\multicolumn{1}{c}{$ 22.1(12) $}                  & $ -149(5) $                           & \multicolumn{1}{c}{424.6(4)}    & 34.9(21)  \\
+		\multicolumn{1}{c}{$ 15.9(9) $}                   & $ -124(4) $                           & \multicolumn{1}{c}{387.6(3)}    & 33.0(22)  \\
+		\multicolumn{1}{c}{$ 9.6(5) $}                    & $ -70.0(24) $                         & \multicolumn{1}{c}{343.7(4)}    & 31.7(23)  \\
+		\multicolumn{1}{c}{$ 2.55(21) $}                  & $ -37.0(13) $                         & \multicolumn{1}{c}{235.2(4)}    & 29.3(26)  \\
+		\multicolumn{1}{c}{$ 0.75(9) $}                   & $ -19.7(7) $                          & \multicolumn{1}{c}{131.3(3)}    & 29(4)     \\
+		\multicolumn{1}{c}{$ 0.18(5) $}                   & $ -10.5(4) $                          & \multicolumn{1}{c}{70.93(22)}   & 24(6)     \\ \midrule
+		\multicolumn{2}{l}{$S_{pi}$ [mW mm$^{-2}$]}                                               & \multicolumn{2}{l}{$\eta$ [\%]}             \\
+		\multicolumn{2}{l}{1.06(11)}                                                              & \multicolumn{2}{l}{0.0207(24)}              \\
+		\multicolumn{2}{l}{0.94(10)}                                                              & \multicolumn{2}{l}{0.0170(20)}              \\
+		\multicolumn{2}{l}{0.51(5)}                                                               & \multicolumn{2}{l}{0.0151(19)}              \\
+		\multicolumn{2}{l}{0.29(3)}                                                               & \multicolumn{2}{l}{0.0089(13)}              \\
+		\multicolumn{2}{l}{0.169(22)}                                                             & \multicolumn{2}{l}{0.0045(8)}               \\
+		\multicolumn{2}{l}{0.104(17)}                                                             & \multicolumn{2}{l}{0.0017(5)}               \\ \bottomrule
 	\end{tabular}
 \end{table}
-
 %\begin{table}[h]\centering
 %	\caption{Key parameters for set $\mathbb{S}_1$ of \BHSC s}
 %	\label{tab:keyparams}

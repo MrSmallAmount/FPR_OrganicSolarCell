@@ -11,14 +11,14 @@ The total power $P_{p0}$ measured by the photo diode at maximum\footnote{This is
 \begin{equation*}
 S_{p0} = 1.07(11)\;\frac{\text{mW}}{\text{mm}^2}.
 \end{equation*}
-As we will show in section~\ref{sec:improvements} there is external information (see \cite{photodiode}) on the aperture of the photo diode we could not make out at the time of the lab.
+As we will show in section~\ref{sec:broedelsec} there is external information (see \cite{photodiode}) on the aperture of the photo diode we could not make out at the time of the lab.
 \begin{figure}[h]
 \includegraphics[scale=0.5]{../2_Pictures/Photodiode_irradiance.pdf}
 \caption{Measured irradiances $S_{pi}$ for each filter $i$ with Laser~Point PD-500-D9-VIS.}
 \label{fig:photodiode_irradiances}
 \end{figure}
 
-We also conducted this measurement with all filters available to us, in order to see how they modulate the intensity of the light. As we can deduct from figure~\ref{fig:photodiode_irradiances}, each filter does not modulate the lights intensity in a linear fashion. The relative decrease in irradiance for maximal to minimal light intensity is
+We also conducted this measurement with all filters available to us, in order to see how they modulate the intensity of the light. As we can deduct from figure~\ref{fig:photodiode_irradiances}, each filter does not modulate the lights intensity in a linear fashion. The relative decrease in irradiance from maximal to minimal light intensity is
 
 \begin{equation}\label{eq:irrad-decrease}
 \Delta S = 1 - \frac{S_{p5}}{S_{p0}} \approx 90.2(19)\;\%.
@@ -34,8 +34,8 @@ $\Uoc$ [mV]& 596(1) & 596.3(4) \\ \bottomrule
 \end{tabular}
 \end{table}
 
-It is evident from table~\ref{tab:reracomp} that our measured results are deficient in accuracy but yield a better precision thaReRaGraph.pdfn those referenced. But nonetheless both of our measured values lie within the range of one $\sigma$ of the values specified by the manufacturer from which we conclude that the SUN~2000 was calibrated correctly.\mypar
-Following the measurements depicted in figure~\ref{fig:photodiode_irradiances}, we investigated the performance of the silicon cell under the six different irradiances. We can see in figure~\ref{fig:reraPCE} that the power conversion efficiency with no filter present, reads $\eta_0 = 12.0(13)\;\%$. This deviates 22(9)~\% from the reference value (see \cite{reracat}). For the irradiance decrease in equation~\ref{eq:irrad-decrease} the silicon reference cells’ power conversion efficiency decreases by 50(10)~\%
+It is evident from table~\ref{tab:reracomp} that our measured results are deficient in accuracy but yield a better precision than those referenced. But nonetheless both of our measured values lie within the range of one $\sigma$ of the values specified by the manufacturer from which we conclude that the SUN~2000 was calibrated correctly.\mypar
+Following the measurements depicted in figure~\ref{fig:photodiode_irradiances}, we investigated the performance of the silicon cell under the six different irradiances. We can see in figure~\ref{fig:reraPCE} that the power conversion efficiency with no filter present, reads $\eta_0 = 12.0(13)\;\%$. This deviates 22(9)~\% from the reference value (see \cite{reracat}). For the irradiance decrease in equation~\ref{eq:irrad-decrease} the silicon reference cells’ power conversion efficiency decreases by 50(10)~\%.
 \begin{figure}[H]\centering
 \includegraphics[scale=.5]{../2_Pictures/ReRaGraph.pdf}
 \caption{Power conversion efficiencies $\eta$ of the Rera~RQN3686 silicon reference cell.}
@@ -48,20 +48,20 @@ That means we will introduce two sets of points. For $\Uoc$ we choose $\{(j_1,U_
 \begin{align}\label{eq:interpol}
 \Uoc = \frac{U_2 j_1 - U_1 j_2}{j_1-j_2}\quad\text{and}\quad \jsc = \frac{U_1^\prime j_2^\prime - U_2^\prime j_1^\prime}{U_1^\prime-U_2^\prime}\;.
 \end{align}
-To get the maximum power density we simply multiplied the all current densities and voltages and used the Python package \texttt{NumPy} to find the largest value.
+To get the maximum power density we simply multiplied all current densities and voltages and used the Python package \texttt{NumPy} to find the largest value.
 \begin{align}
 \Pmax = \max_{i} (j_i\cdot U_i)
 \end{align}
-The fill factor $F\!F$ is defined as the ratio of maximum power and the product of $U_{\mathrm{OC}}$ and $j_{\mathrm{SC}}$.
+The fill factor $F\!F$ is defined as the ratio of maximum power to the product of $U_{\mathrm{OC}}$ and $j_{\mathrm{SC}}$.
 \begin{align}
 F\!F = \frac{\Pmax}{\Uoc \cdot \jsc}
 \end{align}
 Finally the maximum power conversion efficiency $\eta$ is defined as the ratio of maximum power density to the irradiance of the incident light.
 \begin{align}
-\eta = \frac{\Pmax}{S_p}
+\eta = \frac{\Pmax}{S}
 \end{align}
 
-In the case of sets $\mathbb{S}_3$ and $\mathbb{S}_\star$ we had multiple working cells. For these we decided to do all calculations with the mean of the current density over the working cells $n$ on each set and include the standard error (see \cite{measurements} section 2.7) in the uncertainties of our results. The systematic errors of the current $u_{I,\text{sys}}$ and voltage $u_{U,\text{sys}}$ measurements were taken from \cite{keithley}. The uncertainty of the mean of the current density of measurement pair $p$ then is given as
+In the case of sets $\mathbb{S}_3$ and $\mathbb{S}_\star$ we had multiple working cells. For these we decided to do all calculations with the mean of the current density over the working cells $n$ on each set and include the standard error (see \cite{measurements} section 2.7) in the uncertainties of our results. The systematic errors of the current $u_{I,\text{sys}}$ and voltage $u_{U,\text{sys}}$ measurements were taken from \cite{keithley}. The uncertainty of the mean current density of measurement pair $p$ then is given as
 \begin{equation}\label{eq:jerr}
 u_{\meann{j_p}} = \sqrt{\frac{\sigma_{j,p}^2}{N_\checkmark} + \meann{u_{j_p,\text{sys}}}^2} \;.
 \end{equation}
@@ -72,21 +72,27 @@ u_{j_{pn},\text{sys}} = \sqrt{ \left( \frac{ u_{I_{pn},\text{sys}}}{A_n}\right)^
 \end{align}
 
 Uncertainties of all other expressions mentioned like equation~\ref{eq:interpol} are obtained through Gaußian error propagation.
+\begin{figure}[H]\centering
+\includegraphics[width=\columnwidth]{../../../IV-Curve-Analysis/OSC1Graph.pdf}
+\caption{Current density measurements of set $\mathbb{S}_1$ for different light intensities. Blue depicts $U_{\mathrm{OC}}\!\cdot\!j_{\mathrm{SC}}$ and orange depicts $\Pmax$ for maximum light intensity.}
+\label{fig:OSC1Graph}
+\end{figure}
 
 \subsection{First set}\label{subsec:S1data}
 
+In the following we will present the results of the sets $\mathbb{S}_1$, $\mathbb{S}_3$, $\mathbb{S}_5$ and $\mathbb{S}_\star$ which we acquired by performing the analysis described in the previous section.\mypar
 For the first set $\mathbb{S}_1$ of \BHSC's, for which only one cell was not shorted, we obtained the following parameters in descending order of light intensity.
-\begin{table}[ht]
+\begin{table}[H]\centering
 \caption{Overview of all obtained key parameters of set $\mathbb{S}_1$. Each row of the upper part of the table corresponds to the row in the lower half of the table. Depicted are all key parameters corresponding to each intensity.}
-\begin{tabular}{@{}c@{\hspace{-0.5ex}}ccc@{}}
+\begin{tabular}{@{}cccc@{}}
 \toprule
-\multicolumn{1}{c}{$\Pmax$ [\textmu $\text{W}\!\cdot\!\text{cm}^{-2}$]} & $\jsc$ [\textmu A $\mathrm{cm}^{-2}$] & \multicolumn{1}{c}{$\Uoc$ [mV]} & $F\!F$ [\%] \\ \midrule
-\multicolumn{1}{c}{$ 22.1(12) $}                  & $ -149(5) $                           & \multicolumn{1}{c}{424.6(4)}    & 34.9(21)  \\
-\multicolumn{1}{c}{$ 15.9(9) $}                   & $ -124(4) $                           & \multicolumn{1}{c}{387.6(3)}    & 33.0(22)  \\
-\multicolumn{1}{c}{$ 9.6(5) $}                    & $ -70.0(24) $                         & \multicolumn{1}{c}{343.7(4)}    & 31.7(23)  \\
-\multicolumn{1}{c}{$ 2.55(21) $}                  & $ -37.0(13) $                         & \multicolumn{1}{c}{235.2(4)}    & 29.3(26)  \\
-\multicolumn{1}{c}{$ 0.75(9) $}                   & $ -19.7(7) $                          & \multicolumn{1}{c}{131.3(3)}    & 29(4)     \\
-\multicolumn{1}{c}{$ 0.18(5) $}                   & $ -10.5(4) $                          & \multicolumn{1}{c}{70.93(22)}   & 24(6)     \\ \midrule
+$\Pmax$ [\textmu $\text{W}\!\cdot\!\text{cm}^{-2}$] & $\jsc$ [\textmu A $\mathrm{cm}^{-2}$] & \multicolumn{1}{c}{$\Uoc$ [mV]} & $F\!F$ [\%] \\ \midrule
+$ 22.1(12) $                  & $ -149(5) $                           & \multicolumn{1}{c}{424.6(4)}    & 34.9(21)  \\
+$ 15.9(9) $                   & $ -124(4) $                           & \multicolumn{1}{c}{387.6(3)}    & 33.0(22)  \\
+$ 9.6(5) $                    & $ -70.0(24) $                         & \multicolumn{1}{c}{343.7(4)}    & 31.7(23)  \\
+$ 2.55(21) $                  & $ -37.0(13) $                         & \multicolumn{1}{c}{235.2(4)}    & 29.3(26)  \\
+$ 0.75(9) $                   & $ -19.7(7) $                          & \multicolumn{1}{c}{131.3(3)}    & 29(4)     \\
+$ 0.18(5) $                   & $ -10.5(4) $                          & \multicolumn{1}{c}{70.93(22)}   & 24(6)     \\ \midrule
 \multicolumn{2}{c}{$S_{i}$ [mW mm$^{-2}$]}                                               & \multicolumn{2}{c}{$\eta$ [\%]}             \\\midrule
 \multicolumn{2}{c}{1.06(11)}                                                              & \multicolumn{2}{c}{0.0207(24)}              \\
 \multicolumn{2}{c}{0.94(10)}                                                              & \multicolumn{2}{c}{0.0170(20)}              \\
@@ -97,19 +103,17 @@ For the first set $\mathbb{S}_1$ of \BHSC's, for which only one cell was not sho
 \end{tabular}
 \end{table}
 
-In figure~\ref{fig:OSC1Graph} the current density measurements for four light intensities are shown. Similar to \cite{source1} we wanted to achieve a clear visualization for the key parameters. The blue rectangle indicates the product of short circuit current and open circuit voltage and the orange rectangle the maximum power per area for the measurement at full intensity of incident light.
-
-\begin{figure}[ht]\centering
-\includegraphics[width=\columnwidth]{../../../IV-Curve-Analysis/OSC1Graph.pdf}
-\caption{Current density measurements of set $\mathbb{S}_1$ for different light intensities. Blue depicts $U_{\mathrm{OC}}\!\cdot\!j_{\mathrm{SC}}$ and orange depicts $\Pmax$ for maximum light intensity.}
-\label{fig:OSC1Graph}
+In figure~\ref{fig:OSC1Graph} the current density measurements for four light intensities are shown. Similar to \cite{source1} we wanted to achieve a clear visualization for the key parameters. The blue rectangle indicates the product of short circuit current and open circuit voltage at the maximum intensity of light. The orange rectangle depicts the maximum power per area at maximum full intensity of incident light.
+\begin{figure}[h]\centering
+\includegraphics[width=\columnwidth]{../../../IV-Curve-Analysis/OSC2Graph.pdf}
+\caption{Current density measurements of set $\mathbb{S}_3$ for different light intensities.}
+\label{fig:OSC3Graph}
 \end{figure}
-
 \subsection{Third set}
 
-We present the calculated key parameters for the third set of cells $\mathbb{S}_3$, which have the same architecture as set $\mathbb{S}_1$ (see table~\ref{tab:assemb-table}), analogously to section~$\ref{subsec:S1data}$. For the results see table~\ref{tab:OSC3table} and figure~\ref{fig:OSC3Graph}.
+We present the calculated key parameters for the third set of cells $\mathbb{S}_3$ analogously in figure~\ref{fig:OSC3Graph} and table~\ref{tab:OSC3table}. All cells on set $\mathbb{S}_3$ have the same architecture as set $\mathbb{S}_1$ (see table~\ref{tab:assemb-table}).
 
-\begin{table}[ht]
+\begin{table}[h]
 \caption{Overview of all obtained key parameters of set $\mathbb{S}_3$. Each row of the upper part of the table corresponds to the row in the lower half of the table. Depicted are all key parameters corresponding to each intensity.}
 \label{tab:OSC3table}
 \begin{tabular}{@{}cccc@{}}
@@ -131,13 +135,17 @@ $\Pmax$ [$\mu$W cm$^{-2}$] & $\jsc$ [$\mu$A $\mathrm{cm}^{-2}$] & $\Uoc$ [mV]   
 \end{tabular}
 \end{table}
 
-\begin{figure}[ht]\centering
-\includegraphics[width=\columnwidth]{../../../IV-Curve-Analysis/OSC2Graph.pdf}
-\caption{Current density measurements of set $\mathbb{S}_1$ for different light intensities.}
-\label{fig:OSC3Graph}
+\subsection{Preassembled set}
+
+We did not measure the diameters $d_n^x$ and $d_n^y$ of the Galinstan droplets of the set $\mathbb{S}_\star$. In order to perform the analysis from section~\ref{subsec:calckeyparams} we used the average of all active areas $\langle A_{kn} \rangle$ from the cells of sets $\mathbb{S}_1$ and $\mathbb{S}_3$. We estimated the error in these areas to be the average uncertainty of said active areas $u_{A_\star} = \langle u_{A_{kn}}\rangle$ and found the results depicted in figure~\ref{fig:OSCstarGraph} and table~\ref{tab:OSCstartable}.
+
+\begin{figure}[h]\centering
+\includegraphics[width=\columnwidth]{../../../IV-Curve-Analysis/OSCPGraph.pdf}
+\caption{Current density measurements for the set $\mathbb{S}_\star$}
+\label{fig:OSCstarGraph}
 \end{figure}
 
-\begin{table}[ht]
+\begin{table}[h]
 \caption{Overview of all obtained key parameters of set $\mathbb{S}_\star$. Each row of the upper part of the table corresponds to the row in the lower half of the table. Depicted are all key parameters corresponding to each intensity.}
 \label{tab:OSCstartable}
 \begin{tabular}{@{}cccc@{}}
@@ -159,26 +167,16 @@ $\Pmax$ [$\mu$W cm$^{-2}$] & $\jsc$ [$\mu$A $\mathrm{cm}^{-2}$] & $\Uoc$ [mV]   
 \end{tabular}
 \end{table}
 
-
-\begin{figure}[ht]\centering
-\includegraphics[width=\columnwidth]{../../../IV-Curve-Analysis/OSCPGraph.pdf}
-\caption{Current density measurements for the set $\mathbb{S}_\star$}
-\label{fig:OSCstarGraph}
-\end{figure}
-
-
-\subsection{Preassembled set}
-
-For this set of cells we did not measure the size of the Galinstan droplets, so in order to do the same calculations, we used the average of the measured areas and the average uncertainty as well $A_\star = \langle A_{kn} \rangle_{kn}$, $u_{A_\star} = \langle u_{A_{kn}}  \rangle_{kn}$. Because of this we can't really trust the exact values of the data, but the shape should remain the same.
-
-\subsection{Set with PEIE electron injection layer $\mathbb{S}_5$}
-For this set we also had to use the average area. Most of the $I-V$-curves of these cells did not yield usable results, however by reversing the bias for one of the cells, a usable curve was achieved.
-\begin{figure}[ht]
+\subsection{Special set}
+We mentioned in section~\ref{subsec:lineupdesc} that the set $\mathbb{S}_5$ underwent a special treatment as we applied a PEIE layer instead of a PEDOT:PSS layer. Most of the $I$-$V$-curves of the cells of this set did not yield usable results, however by reversing the bias for one of the cells, we achieved a somewhat functional curve. It is illustrated in figure~\ref{fig:OSC5graph} with the numerical results contained in table~\ref{tab:OSC5table}.
+\begin{figure}[h]
 \centering
 \includegraphics[width=\columnwidth]{../../../IV-Curve-Analysis/OSC5Graph.pdf}
 \caption{Current density measurement for set $\mathbb{S}_5$ at full intensity after reversing the bias}
+\label{fig:OSC5graph}
 \end{figure}
-\begin{table}[ht]
+
+\begin{table}[h]
 \centering
 \caption{Overview of all obtained key parameters of set $\mathbb{S}_5$. These measurements were done without a filter in front of the solar simulator.}
 \label{tab:OSC5table}
@@ -189,6 +187,6 @@ $\Pmax$ [$\mu$W cm$^{-2}$] & 0.16(7) \\
 $\jsc$ [$\mu$A $\mathrm{cm}^{-2}$]             & -9.2(3)                     \\
 $\Uoc$ [mV]                                    & 75.58(24)                   \\
 $FF$ [\%]                                      & 22(10)                      \\
-$\eta$ [\%]                                    & 0.00015(6)                  \\ \bottomrule
+$\eta$ [\%]                                    & 15(6)$\cdot 10^{-5}$                  \\ \bottomrule
 \end{tabular}
 \end{table}

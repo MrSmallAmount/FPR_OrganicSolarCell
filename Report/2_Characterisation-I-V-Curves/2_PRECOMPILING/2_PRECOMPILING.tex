@@ -38,7 +38,11 @@ As we will show in section~\ref{sec:improvements} there is external information 
 	\label{fig:photodiode_irradiances}
 \end{figure}
 
-We also conducted this measurement with all filters available to us, in order to see how they modulate the intensity of the light. As we can deduct from figure~\ref{fig:photodiode_irradiances}, each filter does not modulate the lights intensity in a linear fashion.\mypar
+We also conducted this measurement with all filters available to us, in order to see how they modulate the intensity of the light. As we can deduct from figure~\ref{fig:photodiode_irradiances}, each filter does not modulate the lights intensity in a linear fashion. The relative decrease in irradiance for maximal to minimal light intensity is
+
+\begin{equation}\label{eq:irrad-decrease}
+	\Delta S = 1 - \frac{S_{p5}}{S_{p0}} \approx 90.2(19)\;\%.
+\end{equation}
 We were aware of the uncertainty in the measurements provided by the photo diode. Hence we performed additional measurements of I-V-curves using a Rera~RQN3686 silicon reference cell. This cell was calibrated on the AM 1.5 spectrum, so in order to check if our solar simulator was calibrated correctly we compared our measurements with the reference values (see \cite{reracat}) illustrated in table~\ref{tab:reracomp}. Because of no uncertainties given in the reference values, we are going to assume an error equal to a single unit in the last figure quoted (see \cite{measurements} section 2.8.1). For the determination of the uncertainty of our measured values we used the same methods as described in the section~\ref{subsec:calckeyparams} below. 
 \begin{table}[h]\centering
 	\caption{Comparison of our measurements with the reference values of the Rera~RQN3686 silicon reference cell for calibration purposes.}
@@ -51,13 +55,12 @@ We were aware of the uncertainty in the measurements provided by the photo diode
 \end{table}
 
 It is evident from table~\ref{tab:reracomp} that our measured results are deficient in accuracy but yield a better precision thaReRaGraph.pdfn those referenced. But nonetheless both of our measured values lie within the range of one $\sigma$ of the values specified by the manufacturer from which we conclude that the SUN~2000 was calibrated correctly.\mypar
-Following the measurements depicted in figure~\ref{fig:photodiode_irradiances}, we investigated the performance of the silicon cell under the six different irradiances.
-
+Following the measurements depicted in figure~\ref{fig:photodiode_irradiances}, we investigated the performance of the silicon cell under the six different irradiances. We can see in figure~\ref{fig:reraPCE} that the power conversion efficiency with no filter present, reads $\eta_0 = 12.0(13)\;\%$. This deviates 22(9)~\% from the reference value (see \cite{reracat}). For the irradiance decrease in equation~\ref{eq:irrad-decrease} the silicon reference cells’ power conversion efficiency decreases by 50(10)~\%
 \begin{figure}[H]\centering
 	\includegraphics[scale=.5]{../2_Pictures/ReRaGraph.pdf}
-	\caption{Power conversion efficiencies $\eta_{\mathrm{PCE}}$ of the Rera~RQN3686 silicon reference cell.}
+	\caption{Power conversion efficiencies $\eta$ of the Rera~RQN3686 silicon reference cell.}
+	\label{fig:reraPCE}
 \end{figure}
-
 
 \subsection{Calculation of key parameters}\label{subsec:calckeyparams}
 In order to calculate the open circuit voltage $\Uoc$ and the short circuit current density $\jsc$ for a set of measurements, we performed a linear interpolation for each quantity. For each interpolation we used the two closest points to the relevant axis\footnote{Being the $j$-axis for $\Uoc$ and the $U$-axis for $\jsc$.} that were separated by it.\mypar
